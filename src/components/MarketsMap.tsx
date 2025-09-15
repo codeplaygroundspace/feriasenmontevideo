@@ -36,29 +36,30 @@ interface MarketsMapProps {
 
 const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNeighborhood = 'all' }) => {
 
-  // Get all unique markets with their days
+  // Get all markets with their day information
   const allMarketsWithDays = useMemo(() => {
-    const marketMap = new Map<string, { market: Market; days: string[] }>();
+    const allMarkets: { market: Market; days: string[] }[] = [];
     
     Object.entries(markets).forEach(([day, dayMarkets]) => {
       dayMarkets.forEach(market => {
-        const key = `${market.lat}-${market.lng}`;
-        if (marketMap.has(key)) {
-          marketMap.get(key)!.days.push(day);
-        } else {
-          marketMap.set(key, { market, days: [day] });
-        }
+        // Add day property to market if it doesn't exist
+        const marketWithDay = { ...market, day };
+        allMarkets.push({ market: marketWithDay, days: [day] });
       });
     });
     
-    return Array.from(marketMap.values());
+    return allMarkets;
   }, []);
 
   // Filter markets based on selected day and neighborhood
   const filteredMarkets = useMemo(() => {
     return allMarketsWithDays.filter(({ market, days }) => {
-      const dayMatch = days.includes(selectedDay);
+      // Handle day filtering
+      const dayMatch = selectedDay === 'all' || days.includes(selectedDay);
+      
+      // Handle neighborhood filtering
       const neighborhoodMatch = selectedNeighborhood === 'all' || market.neighborhood === selectedNeighborhood;
+      
       return dayMatch && neighborhoodMatch;
     });
   }, [allMarketsWithDays, selectedDay, selectedNeighborhood]);
@@ -89,7 +90,8 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNe
           
           {filteredMarkets.map(({ market, days }, index) => {
             const color = getMarketColor(days);
-            const icon = createCustomIcon(color.replace('bg-', '#').replace('-400', ''));
+            const colorValue = color.replace('bg-', '#').replace('-400', '');
+            const icon = createCustomIcon(colorValue);
             
             return (
               <Marker
@@ -110,17 +112,16 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNe
                     </p>
                     <div className="mb-2">
                       <p className="text-sm font-medium text-gray-700 mb-1">
-                        Días disponibles:
+                        Día:
                       </p>
                       <div className="flex flex-wrap gap-1">
-                        {days.map(day => (
+                        {market.day && (
                           <span
-                            key={day}
-                            className={`px-2 py-1 rounded text-xs font-medium text-white ${dayColors[day]}`}
+                            className={`px-2 py-1 rounded text-xs font-medium text-white ${dayColors[market.day]}`}
                           >
-                            {dayNames[day]}
+                            {dayNames[market.day]}
                           </span>
-                        ))}
+                        )}
                       </div>
                     </div>
                   </div>

@@ -7,7 +7,7 @@ import DynamicMarketsMap from "@/components/DynamicMarketsMap";
 import type { Market } from "@/data";
 
 export default function Home() {
-  const [selectedDay, setSelectedDay] = useState<string>("monday");
+  const [selectedDay, setSelectedDay] = useState<string>("all");
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>("all");
 
   const handleDayChange = (day: string, markets: Market[]) => {

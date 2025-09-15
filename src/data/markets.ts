@@ -11,6 +11,7 @@ export const markets: MarketsData = {
       neighborhood: "belvedere",
       lat: -34.9176,
       lng: -56.1528,
+      day: "tuesday",
     },
     {
       name: "Feria Cerro - Paso de la Arena",
@@ -1076,6 +1077,7 @@ export const markets: MarketsData = {
 };
 
 export const dayNames: DayNames = {
+  all: "Todos",
   monday: "Lunes",
   tuesday: "Martes",
   wednesday: "Miércoles",
@@ -1086,6 +1088,7 @@ export const dayNames: DayNames = {
 };
 
 export const dayColors: DayColors = {
+  all: "bg-gray-400",
   monday: "bg-red-400",
   tuesday: "bg-teal-400",
   wednesday: "bg-blue-400",
