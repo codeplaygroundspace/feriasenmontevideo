@@ -53,7 +53,7 @@ interface MarketsMapProps {
   userCoordinates?: Coordinates | null;
 }
 
-const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNeighborhood = 'all', userCoordinates }) => {
+const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'tuesday', selectedNeighborhood = 'all', userCoordinates }) => {
 
   // Get all markets with their day information
   const allMarketsWithDays = useMemo(() => {
@@ -75,7 +75,7 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNe
     return allMarketsWithDays
       .filter(({ market, days }) => {
         // Handle day filtering
-        const dayMatch = selectedDay === 'all' || days.includes(selectedDay);
+        const dayMatch = days.includes(selectedDay);
         
         // Handle neighborhood filtering
         const neighborhoodMatch = selectedNeighborhood === 'all' || market.neighborhood === selectedNeighborhood;
@@ -111,10 +111,10 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNe
   // Get the most common color for a market (if it appears on multiple days)
   const getMarketColor = (days: string[]) => {
     if (days.length === 1) {
-      return dayColors[days[0] as keyof typeof dayColors] || dayColors.all;
+      return dayColors[days[0] as keyof typeof dayColors] || "bg-gray-400";
     }
     // For markets on multiple days, use the first day's color
-    return dayColors[days[0] as keyof typeof dayColors] || dayColors.all;
+    return dayColors[days[0] as keyof typeof dayColors] || "bg-gray-400";
   };
 
   return (
@@ -191,7 +191,7 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNe
                       <div className="flex flex-wrap gap-1">
                         {market.day && (
                           <span
-                            className={`px-2 py-1 rounded text-xs font-medium text-white ${dayColors[market.day as keyof typeof dayColors] || dayColors.all}`}
+                            className={`px-2 py-1 rounded text-xs font-medium text-white ${dayColors[market.day as keyof typeof dayColors] || "bg-gray-400"}`}
                           >
                             {dayNames[market.day as keyof typeof dayNames] || "N/A"}
                           </span>

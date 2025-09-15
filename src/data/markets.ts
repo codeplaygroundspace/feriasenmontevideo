@@ -7,6 +7,7 @@ export const markets: MarketsData = {
   ],
   tuesday: [
     {
+      id: "market-001",
       name: "Feria Belvedere",
       location: "Villavicencio y Santa Lucía",
       neighborhood: "belvedere",
@@ -14,6 +15,7 @@ export const markets: MarketsData = {
       lng: -56.1528,
     },
     {
+      id: "market-002",
       name: "Feria Cerro - Paso de la Arena",
       location: "Polonia y Carlos María Ramírez",
       neighborhood: "cerro-paso-arena",
@@ -21,6 +23,7 @@ export const markets: MarketsData = {
       lng: -56.0444,
     },
     {
+      id: "market-003",
       name: "Feria Barrio Sur",
       location: "Durazno entre Convención y Wilson Ferreira Aldunate",
       neighborhood: "barrio-sur",
@@ -28,6 +31,7 @@ export const markets: MarketsData = {
       lng: -56.1881,
     },
     {
+      id: "market-004",
       name: "Feria Ciudad Vieja",
       location: "Bartolomé Mitre entre Cerrito y Piedras",
       neighborhood: "ciudad-vieja",
@@ -35,6 +39,7 @@ export const markets: MarketsData = {
       lng: -56.2081,
     },
     {
+      id: "market-005",
       name: "Feria Palermo",
       location: "Martínez Trueba y Canelones",
       neighborhood: "palermo",
@@ -42,6 +47,7 @@ export const markets: MarketsData = {
       lng: -56.1869,
     },
     {
+      id: "market-006",
       name: "Feria Parque Rodó",
       location: "Acevedo Díaz entre Canelones y Charrúa",
       neighborhood: "parque-rodo",
@@ -49,6 +55,7 @@ export const markets: MarketsData = {
       lng: -56.1631,
     },
     {
+      id: "market-007",
       name: "Feria Prado Nueva Savona",
       location: "Regidores desde Venancio Benavídez hasta avenida Joaquín Suárez",
       neighborhood: "prado-nueva-savona",
@@ -56,6 +63,7 @@ export const markets: MarketsData = {
       lng: -56.1833,
     },
     {
+      id: "market-008",
       name: "Feria Tres Cruces",
       location: "Juan Paullier, desde Av. Rivera hasta J. Paullier 1482",
       neighborhood: "tres-cruces",
@@ -63,6 +71,7 @@ export const markets: MarketsData = {
       lng: -56.1558,
     },
     {
+      id: "market-009",
       name: "Feria La Blanqueada",
       location: "Secco Illa y Av. Centenario",
       neighborhood: "la-blanqueada",
@@ -70,6 +79,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-010",
       name: "Feria Cerrito",
       location: "Rafael Hortiguera desde Nilo hasta Ortiz de Zárate",
       neighborhood: "cerrito",
@@ -77,6 +87,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-011",
       name: "Feria La Blanqueada",
       location: "Juan Ortiz y Francisco Simón",
       neighborhood: "la-blanqueada",
@@ -84,6 +95,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-012",
       name: "Feria Malvín Norte",
       location: "Emilio Castelar y Roberto Berro",
       neighborhood: "malvin-norte",
@@ -91,6 +103,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-013",
       name: "Feria Unión",
       location: "Lombardini y Comercio",
       neighborhood: "union",
@@ -98,6 +111,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-014",
       name: "Feria Malvín",
       location: "Verdi desde circunvalación de la Plaza de los Olímpicos hasta el Nº 4561",
       neighborhood: "malvin",
@@ -105,6 +119,7 @@ export const markets: MarketsData = {
       lng: -56.1000,
     },
     {
+      id: "market-015",
       name: "Feria Jardines del Hipódromo",
       location: "Bérgamo y Lacio",
       neighborhood: "jardines-del-hipodromo",
@@ -112,6 +127,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-016",
       name: "Feria Manga",
       location: "Av. de la Aljaba entre Av. José Belloni",
       neighborhood: "manga",
@@ -119,6 +135,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-017",
       name: "Feria Lezica - Melilla",
       location: "Plaza Lezica",
       neighborhood: "lezica-melilla",
@@ -126,6 +143,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-018",
       name: "Feria Peñarol y Lavalleja",
       location: "Av, de las Instrucciones y Jose Mª. Silva",
       neighborhood: "penarol-lavalleja",
@@ -133,6 +151,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-019",
       name: "Feria Sayago",
       location: "28 de Febrero y Elías Regules",
       neighborhood: "sayago",
@@ -142,6 +161,7 @@ export const markets: MarketsData = {
   ],
   wednesday: [
     {
+      id: "market-020",
       name: "Feria Belvedere",
       location: "Emilio Romero, desde India Muerta hasta Vicente Basagoity",
       neighborhood: "belvedere",
@@ -149,6 +169,7 @@ export const markets: MarketsData = {
       lng: -56.1528,
     },
     {
+      id: "market-021",
       name: "Feria Nuevo París",
       location: "Alfredo Gobbi y Romeo Gavioli",
       neighborhood: "nuevo-paris",
@@ -156,6 +177,7 @@ export const markets: MarketsData = {
       lng: -56.1558,
     },
     {
+      id: "market-022",
       name: "Feria La Paloma - Tomkinson",
       location: "1ª Paralela a San Fuentes y Cibils",
       neighborhood: "la-paloma-tomkinson",
@@ -163,6 +185,7 @@ export const markets: MarketsData = {
       lng: -56.1319,
     },
     {
+      id: "market-023",
       name: "Feria Parque Rodó",
       location: "San Salvador desde la calle Dr. Pablo de María hasta el Nº 2121",
       neighborhood: "parque-rodo",
@@ -170,6 +193,7 @@ export const markets: MarketsData = {
       lng: -56.1631,
     },
     {
+      id: "market-024",
       name: "Feria Brazo Oriental",
       location: "Juan José Quesada desde Dr. Homero de Gregorio hasta el N°3662",
       neighborhood: "brazo-oriental",
@@ -177,6 +201,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-025",
       name: "Feria Brazo Oriental",
       location: "Carabelas desde Av. Luis A. de Herrera hacia Regimiento 9",
       neighborhood: "brazo-oriental",
@@ -184,6 +209,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-026",
       name: "Feria Capurro / Bella Vista",
       location: "Húsares entre Capurro y Alberto Flangini",
       neighborhood: "capurro-bella-vista",
@@ -191,6 +217,7 @@ export const markets: MarketsData = {
       lng: -56.2000,
     },
     {
+      id: "market-027",
       name: "Feria Prado Nueva Savona",
       location: "Dr. Anacleto Dufort y Álvarez desde Juan C. Blanco a Atanasio Aguirre",
       neighborhood: "prado-nueva-savona",
@@ -198,6 +225,7 @@ export const markets: MarketsData = {
       lng: -56.1833,
     },
     {
+      id: "market-028",
       name: "Feria Reducto",
       location: "Guaycurú de Dr. Evaristo Ciganda hacia Fiol de Pereda",
       neighborhood: "reducto",
@@ -205,6 +233,7 @@ export const markets: MarketsData = {
       lng: -56.1667,
     },
     {
+      id: "market-029",
       name: "Feria Buceo",
       location: "Jacinto Vera desde Av. Santiago Rivas hasta la calle Estivao",
       neighborhood: "buceo",
@@ -212,6 +241,7 @@ export const markets: MarketsData = {
       lng: -56.1333,
     },
     {
+      id: "market-030",
       name: "Feria Parque Batlle y Villa Dolores",
       location: "Bado, desde Llambí hasta Mac Eachen",
       neighborhood: "parque-batlle-villa-dolores",
@@ -219,6 +249,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-031",
       name: "Feria Pocitos",
       location: "José B. Lamas entre Libertad y Quebracho",
       neighborhood: "pocitos",
@@ -226,6 +257,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-032",
       name: "Feria Pocitos",
       location: "La Gaceta desde el Nº 1211 (26 de Marzo) hasta el Nº 1280 (hacia Francisco Muñoz)",
       neighborhood: "pocitos",
@@ -233,6 +265,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-033",
       name: "Feria Manga",
       location: "Artilleros Orientales y Oficial 1",
       neighborhood: "manga",
@@ -240,6 +273,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-034",
       name: "Feria Manga - Toledo Chico",
       location: "Calle auxiliar de Av. de las Instrucciones desde su primer acceso por Av. de las Instrucciones metros después de la rotonda con Av. Belloni hasta el Nº 4259",
       neighborhood: "manga-toledo-chico",
@@ -247,6 +281,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-035",
       name: "Feria Piedras Blancas",
       location: "Piedras Blancas",
       neighborhood: "piedras-blancas",
@@ -254,6 +289,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-036",
       name: "Feria Villa Española",
       location: "Himalaya y Espartillo",
       neighborhood: "villa-espanola",
@@ -261,6 +297,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-037",
       name: "Feria Malvín Norte",
       location: "Dr. Crovetto desde Cambay hasta E Ravignani",
       neighborhood: "malvin-norte",
@@ -268,6 +305,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-038",
       name: "Feria Unión",
       location: "Pernas y Asilo",
       neighborhood: "union",
@@ -275,6 +313,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-039",
       name: "Feria Malvín",
       location: "Missouri entre Av. Gral Rivera y la calle Dr. Decroly",
       neighborhood: "malvin",
@@ -282,6 +321,7 @@ export const markets: MarketsData = {
       lng: -56.1000,
     },
     {
+      id: "market-040",
       name: "Feria Carrasco",
       location: "Canadá, desde Av. Bolivia hasta Yamandú Rodríguez",
       neighborhood: "carrasco",
@@ -289,6 +329,7 @@ export const markets: MarketsData = {
       lng: -56.0833,
     },
     {
+      id: "market-041",
       name: "Feria Carrasco Norte",
       location: "Verona, desde Av. Bolivia hasta Siracusa",
       neighborhood: "carrasco-norte",
@@ -296,6 +337,7 @@ export const markets: MarketsData = {
       lng: -56.0833,
     },
     {
+      id: "market-042",
       name: "Feria Ituzaingó",
       location: "Bage y Gral. Flores",
       neighborhood: "ituzaingo",
@@ -303,6 +345,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-043",
       name: "Feria Colón Sureste y Abayubá",
       location: "Hansen y Besnes Irigoyen",
       neighborhood: "colon-sureste-abayuba",
@@ -310,6 +353,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-044",
       name: "Feria Barrio Conciliación",
       location: "Capitulares y Antonio M. Márquez",
       neighborhood: "barrio-conciliacion",
@@ -317,6 +361,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-045",
       name: "Feria Paso de las Duranas",
       location: "Antonio Díaz, desde Mazangano hasta Coronel Olavarría",
       neighborhood: "paso-de-las-duranas",
@@ -326,6 +371,7 @@ export const markets: MarketsData = {
   ],
   thursday: [
     {
+      id: "market-046",
       name: "Feria Prado - Nueva Savona",
       location: "Pilar Costa e India Muerta",
       neighborhood: "prado-nueva-savona",
@@ -333,6 +379,7 @@ export const markets: MarketsData = {
       lng: -56.1869,
     },
     {
+      id: "market-047",
       name: "Feria Cerro - Paso de la Arena",
       location: "Centroamérica y Grecia",
       neighborhood: "cerro-paso-arena",
@@ -340,6 +387,7 @@ export const markets: MarketsData = {
       lng: -56.0444,
     },
     {
+      id: "market-048",
       name: "Feria La Paloma - Tomkinson",
       location: "Alfredo Moreno y Camino Tomkinson",
       neighborhood: "la-paloma-tomkinson",
@@ -347,6 +395,7 @@ export const markets: MarketsData = {
       lng: -56.1319,
     },
     {
+      id: "market-049",
       name: "Feria Cordón",
       location: "Carlos Roxlo entre AV. Uruguay Y Paysandú",
       neighborhood: "cordon",
@@ -354,6 +403,7 @@ export const markets: MarketsData = {
       lng: -56.1869,
     },
     {
+      id: "market-050",
       name: "Feria Palermo",
       location: "Isla de Flores, desde Gaboto hasta Isla de Flores 1780",
       neighborhood: "palermo",
@@ -361,6 +411,7 @@ export const markets: MarketsData = {
       lng: -56.1869,
     },
     {
+      id: "market-051",
       name: "Feria Jacinto Vera",
       location: "Martin C. Martínez, desde Gallinal hasta Yaguarí",
       neighborhood: "jacinto-vera",
@@ -368,6 +419,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-052",
       name: "Feria La Figurita",
       location: "Guadalupe entre Av. Garibaldi y Joaquín Requena",
       neighborhood: "la-figurita",
@@ -375,6 +427,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-053",
       name: "Feria Villa Muñoz / Retiro",
       location: "Constitución desde Juan J. De Amézaga hasta Blandengues",
       neighborhood: "villa-munoz-retiro",
@@ -382,6 +435,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-054",
       name: "Feria Larrañaga",
       location: "Juan Cabal, desde Monte Caseros hasta J. Cabal Nº 2578",
       neighborhood: "larranaga",
@@ -389,6 +443,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-055",
       name: "Feria Aires Puros",
       location: "Pedro Trápani desde Bayona hasta Atahona",
       neighborhood: "aires-puros",
@@ -396,6 +451,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-056",
       name: "Feria Brazo Oriental",
       location: "Ramón Márquez desde Av. Luis A. de Herrera hasta Pestalozzi",
       neighborhood: "brazo-oriental",
@@ -403,6 +459,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-057",
       name: "Feria Capurro / Bella Vista",
       location: "Nerses Ounanian desde Agraciada hasta Jujuy",
       neighborhood: "capurro-bella-vista",
@@ -410,6 +467,7 @@ export const markets: MarketsData = {
       lng: -56.2000,
     },
     {
+      id: "market-058",
       name: "Feria Pocitos",
       location: "Charrúa entre Dr. Francisco Soca y Brito del Pino",
       neighborhood: "pocitos",
@@ -417,6 +475,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-059",
       name: "Feria Pocitos",
       location: "Simón Bolívar desde Palmar a Enrique Pouey",
       neighborhood: "pocitos",
@@ -424,6 +483,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-060",
       name: "Feria Pocitos",
       location: "José Luis Osorio desde la calle Francisco Muñoz hasta Plácido Ellauri",
       neighborhood: "pocitos",
@@ -431,6 +491,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-061",
       name: "Feria Piedras Blancas",
       location: "Cabari y Av. Gral. Flores",
       neighborhood: "piedras-blancas",
@@ -438,6 +499,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-062",
       name: "Feria Cerrito",
       location: "Basilio Araujo desde Bruno Méndez a la calle Rafael Hortiguera",
       neighborhood: "cerrito",
@@ -445,6 +507,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-063",
       name: "Feria Castro Castellanos",
       location: "Pablo Pérez y Londres",
       neighborhood: "castro-castellanos",
@@ -452,6 +515,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-064",
       name: "Feria Mercado Modelo - Bolívar",
       location: "Madreselva y Siena",
       neighborhood: "mercado-modelo-bolivar",
@@ -459,6 +523,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-065",
       name: "Feria Malvín",
       location: "Santiago de Anca desde Asamblea hasta Rubens",
       neighborhood: "malvin",
@@ -466,6 +531,7 @@ export const markets: MarketsData = {
       lng: -56.1000,
     },
     {
+      id: "market-066",
       name: "Feria Flor de Maroñas",
       location: "Oyarvide y Cno. Maldonado",
       neighborhood: "flor-de-maronas",
@@ -473,6 +539,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-067",
       name: "Feria Malvín Norte",
       location: "Pirán y Cno. Carrasco",
       neighborhood: "malvin-norte",
@@ -480,6 +547,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-068",
       name: "Feria Colón Centro y Noroeste",
       location: "Santiago de Compostela y Calderón de la Barca",
       neighborhood: "colon-centro-noroeste",
@@ -487,6 +555,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-069",
       name: "Feria Peñarol y Lavalleja",
       location: "Mauricio Maeterlink desde Watt hasta el Nº 4997",
       neighborhood: "penarol-lavalleja",
@@ -496,6 +565,7 @@ export const markets: MarketsData = {
   ],
   friday: [
     {
+      id: "market-070",
       name: "Feria Belvedere",
       location: "Vicente Basagoity desde avenida Carlos María Ramírez a A. Vaillant",
       neighborhood: "belvedere",
@@ -503,6 +573,7 @@ export const markets: MarketsData = {
       lng: -56.1528,
     },
     {
+      id: "market-071",
       name: "Feria Casabó - Pajas Blancas",
       location: "Etiopía y Liberia",
       neighborhood: "casabo-pajas-blancas",
@@ -510,6 +581,7 @@ export const markets: MarketsData = {
       lng: -56.1558,
     },
     {
+      id: "market-072",
       name: "Feria La Paloma - Tomkinson",
       location: "Verdún y Camino de las Tropas",
       neighborhood: "la-paloma-tomkinson",
@@ -517,6 +589,7 @@ export const markets: MarketsData = {
       lng: -56.1319,
     },
     {
+      id: "market-073",
       name: "Feria Paso de la Arena",
       location: "Silvestre Ochoa y Av. Luis Batlle Berres",
       neighborhood: "paso-arena",
@@ -524,6 +597,7 @@ export const markets: MarketsData = {
       lng: -56.0444,
     },
     {
+      id: "market-074",
       name: "Feria Ciudad Vieja",
       location: "Guaraní entre Sarandí y Buenos Aires",
       neighborhood: "ciudad-vieja",
@@ -531,6 +605,7 @@ export const markets: MarketsData = {
       lng: -56.2081,
     },
     {
+      id: "market-075",
       name: "Feria Cordón",
       location: "Chaná y Gaboto",
       neighborhood: "cordon",
@@ -538,6 +613,7 @@ export const markets: MarketsData = {
       lng: -56.1869,
     },
     {
+      id: "market-076",
       name: "Feria Cordón",
       location: "Guaná entre Manuel Blanes y Jackson",
       neighborhood: "cordon",
@@ -545,6 +621,7 @@ export const markets: MarketsData = {
       lng: -56.1869,
     },
     {
+      id: "market-077",
       name: "Feria Centro",
       location: "Julio Herrera y Obes entre Maldonado y Durazno",
       neighborhood: "centro",
@@ -552,6 +629,7 @@ export const markets: MarketsData = {
       lng: -56.1881,
     },
     {
+      id: "market-078",
       name: "Feria La Blanqueada",
       location: "Secco Illa y Av. Centenario",
       neighborhood: "la-blanqueada",
@@ -559,6 +637,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-079",
       name: "Feria Larrañaga",
       location: "Carlos Anaya, desde Estero Bellaco hasta Comandante Braga Nº 2775 bis",
       neighborhood: "larranaga",
@@ -566,6 +645,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-080",
       name: "Feria Parque Batlle y Villa Dolores",
       location: "Tiburcio Gómez y Ramón Anador",
       neighborhood: "parque-batlle-villa-dolores",
@@ -573,6 +653,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-081",
       name: "Feria Parque Batlle y Villa Dolores",
       location: "Ayacucho desde Gral. Las Heras Hasta el N° 3314",
       neighborhood: "parque-batlle-villa-dolores",
@@ -580,6 +661,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-082",
       name: "Feria Reducto",
       location: "Colorado desde Marsella hasta Marcelino Sosa y Rocha hasta Vilardebó",
       neighborhood: "reducto",
@@ -587,6 +669,7 @@ export const markets: MarketsData = {
       lng: -56.1667,
     },
     {
+      id: "market-083",
       name: "Feria Prado Nueva Savona",
       location: "Valentín Gómez desde Agraciada hasta Valle Edén",
       neighborhood: "prado-nueva-savona",
@@ -594,6 +677,7 @@ export const markets: MarketsData = {
       lng: -56.1833,
     },
     {
+      id: "market-084",
       name: "Feria Mercado Modelo / Bolívar",
       location: "Sancho Panza desde Av. Luis Alberto de Herrera hasta el Nº 3170",
       neighborhood: "mercado-modelo-bolivar",
@@ -601,6 +685,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-085",
       name: "Feria Pocitos",
       location: "Santiago Vázquez, desde la calle Guayaqui hasta la calle Ramón Masini y por Ramón Masini hasta la calle Libertad",
       neighborhood: "pocitos",
@@ -608,6 +693,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-086",
       name: "Feria Manga - Toledo Chico",
       location: "Cno. Pettirossi y Av. de las Instrucciones",
       neighborhood: "manga-toledo-chico",
@@ -615,6 +701,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-087",
       name: "Feria Casavalle",
       location: "Isidoro Mas de Ayala y José Martirené",
       neighborhood: "casavalle",
@@ -622,6 +709,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-088",
       name: "Feria Unión",
       location: "Larravide, desde Fray Bentos hasta Av. 20 de Febrero",
       neighborhood: "union",
@@ -629,6 +717,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-089",
       name: "Feria Malvín",
       location: "Decroly de Amazonas a Rimac",
       neighborhood: "malvin",
@@ -636,6 +725,7 @@ export const markets: MarketsData = {
       lng: -56.1000,
     },
     {
+      id: "market-090",
       name: "Feria Buceo",
       location: "Juan M. Espinosa desde el Nº 1466, es entre las calles Av. Gral. Rivera hasta Asamblea",
       neighborhood: "buceo",
@@ -643,6 +733,7 @@ export const markets: MarketsData = {
       lng: -56.1333,
     },
     {
+      id: "market-091",
       name: "Feria Villa García - Manga Rural",
       location: "Cno. Maldonado km 16",
       neighborhood: "villa-garcia-manga-rural",
@@ -650,6 +741,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-092",
       name: "Feria Lezica - Melilla",
       location: "Santa María y Montalvo",
       neighborhood: "lezica-melilla",
@@ -657,6 +749,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-093",
       name: "Feria Paso de las Duranas",
       location: "Sipe Sipe y Castro",
       neighborhood: "paso-de-las-duranas",
@@ -664,6 +757,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-094",
       name: "Feria Sayago",
       location: "Tacuabé y Av. Sayago",
       neighborhood: "sayago",
@@ -673,6 +767,7 @@ export const markets: MarketsData = {
   ],
   saturday: [
     {
+      id: "market-095",
       name: "Feria La Teja",
       location: "Rivera Indarte y Carlos María Ramírez",
       neighborhood: "la-teja",
@@ -680,6 +775,7 @@ export const markets: MarketsData = {
       lng: -56.1631,
     },
     {
+      id: "market-096",
       name: "Feria Cerro - Paso de la Arena",
       location: "Perú y Gibraltar",
       neighborhood: "cerro-paso-arena",
@@ -687,6 +783,7 @@ export const markets: MarketsData = {
       lng: -56.0444,
     },
     {
+      id: "market-097",
       name: "Feria Paso de la Arena",
       location: "Zanja Reyuna e Ideario Artiguista",
       neighborhood: "paso-arena",
@@ -694,6 +791,7 @@ export const markets: MarketsData = {
       lng: -56.0444,
     },
     {
+      id: "market-098",
       name: "Feria Aguada",
       location: "Piedra Alta y Lima",
       neighborhood: "aguada",
@@ -701,6 +799,7 @@ export const markets: MarketsData = {
       lng: -56.1558,
     },
     {
+      id: "market-099",
       name: "Feria Cordón",
       location: "Salto, desde Soriano hasta San Salvador",
       neighborhood: "cordon",
@@ -708,6 +807,7 @@ export const markets: MarketsData = {
       lng: -56.1869,
     },
     {
+      id: "market-100",
       name: "Feria Cordón",
       location: "Acevedo Díaz y Francisco Canaro",
       neighborhood: "cordon",
@@ -715,6 +815,7 @@ export const markets: MarketsData = {
       lng: -56.1869,
     },
     {
+      id: "market-101",
       name: "Feria La Comercial",
       location: "General Pagola, desde la calle Duvimioso Terra hasta la calle Cufré",
       neighborhood: "la-comercial",
@@ -722,6 +823,7 @@ export const markets: MarketsData = {
       lng: -56.1881,
     },
     {
+      id: "market-102",
       name: "Feria Parque Batlle y Villa Dolores",
       location: "Comodoro Coe desde Bulevar José Batlle y Ordóñez hasta la calle Dr. Pedro Bustamante",
       neighborhood: "parque-batlle-villa-dolores",
@@ -729,6 +831,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-103",
       name: "Feria Buceo",
       location: "Nicolas Piaggio desde la calle Rizal hacia el Nº 1393 (Av. General Rivera)",
       neighborhood: "buceo",
@@ -736,6 +839,7 @@ export const markets: MarketsData = {
       lng: -56.1333,
     },
     {
+      id: "market-104",
       name: "Feria Parque Batlle y Villa Dolores",
       location: "Diego Lamas entre las calles Capitán Videla y Feliciano Rodríguez",
       neighborhood: "parque-batlle-villa-dolores",
@@ -743,6 +847,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-105",
       name: "Feria Reducto",
       location: "Enrique Martinez desde Grito de Asencio hasta el Nº 1167",
       neighborhood: "reducto",
@@ -750,6 +855,7 @@ export const markets: MarketsData = {
       lng: -56.1667,
     },
     {
+      id: "market-106",
       name: "Feria Malvín",
       location: "Aceguá entre Concepción del Uruguay a Hipólito Yrigoyen",
       neighborhood: "malvin",
@@ -757,6 +863,7 @@ export const markets: MarketsData = {
       lng: -56.1000,
     },
     {
+      id: "market-107",
       name: "Feria Buceo",
       location: "Mariscala, Samuel Blixen y Nancy",
       neighborhood: "buceo",
@@ -764,6 +871,7 @@ export const markets: MarketsData = {
       lng: -56.1333,
     },
     {
+      id: "market-108",
       name: "Feria Punta Gorda",
       location: "Brenda entre Av. Gral Paz hasta el 5819 (hacia la calle Motivos de Proteo)",
       neighborhood: "punta-gorda",
@@ -771,6 +879,7 @@ export const markets: MarketsData = {
       lng: -56.1000,
     },
     {
+      id: "market-109",
       name: "Feria Carrasco",
       location: "Couture y Arocena",
       neighborhood: "carrasco",
@@ -778,6 +887,7 @@ export const markets: MarketsData = {
       lng: -56.0833,
     },
     {
+      id: "market-110",
       name: "Feria Flor de Maroñas",
       location: "Vicenza y Av. 8 de Octubre",
       neighborhood: "flor-de-maronas",
@@ -785,6 +895,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-111",
       name: "Feria Flor de Maroñas",
       location: "Manuel Acuña y Marcos Salcedo",
       neighborhood: "flor-de-maronas",
@@ -792,6 +903,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-112",
       name: "Feria Jardines del Hipódromo",
       location: "Bérgamo y Lacio",
       neighborhood: "jardines-del-hipodromo",
@@ -799,6 +911,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-113",
       name: "Feria Malvín Norte",
       location: "Pirán y Cno. Carrasco",
       neighborhood: "malvin-norte",
@@ -806,6 +919,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-114",
       name: "Feria Punta de Rieles - Bella Italia",
       location: "Florencia y V. Manuel",
       neighborhood: "punta-de-rieles-bella-italia",
@@ -813,6 +927,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-115",
       name: "Feria Villa García - Manga Rural",
       location: "Ruta 8 km 19",
       neighborhood: "villa-garcia-manga-rural",
@@ -820,6 +935,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-116",
       name: "Feria Manga",
       location: "Av. de la Aljaba entre Av. José Belloni",
       neighborhood: "manga",
@@ -827,6 +943,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-117",
       name: "Feria Piedras Blancas",
       location: "Piedras Blancas",
       neighborhood: "piedras-blancas",
@@ -834,6 +951,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-118",
       name: "Feria Colón Centro y Noroeste",
       location: "Eduardo Raíz y Av. Eugenio Garzón",
       neighborhood: "colon-centro-noroeste",
@@ -841,6 +959,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-119",
       name: "Feria Lezica - Melilla",
       location: "Plaza Lezica",
       neighborhood: "lezica-melilla",
@@ -848,6 +967,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-120",
       name: "Feria Paso de las Duranas",
       location: "Antonio Díaz, desde Mazangano hasta Coronel Olavarría",
       neighborhood: "paso-de-las-duranas",
@@ -855,6 +975,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-121",
       name: "Feria Paso de las Duranas",
       location: "Torres, desde Mazangano hasta D. Torres Nº 4459",
       neighborhood: "paso-de-las-duranas",
@@ -862,6 +983,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-122",
       name: "Feria Barrio Conciliación",
       location: "Av. Millán y Lecocq",
       neighborhood: "barrio-conciliacion",
@@ -871,6 +993,7 @@ export const markets: MarketsData = {
   ],
   sunday: [
     {
+      id: "market-123",
       name: "Feria La Teja",
       location: "Luis Batlle Berres y Madre Rubatto",
       neighborhood: "la-teja",
@@ -878,6 +1001,7 @@ export const markets: MarketsData = {
       lng: -56.1631,
     },
     {
+      id: "market-124",
       name: "Feria Nuevo París",
       location: "Triunfo desde Carlos de la Vega hasta 30 m pasado la intersección con Juliana Laguna",
       neighborhood: "nuevo-paris",
@@ -885,6 +1009,7 @@ export const markets: MarketsData = {
       lng: -56.1558,
     },
     {
+      id: "market-125",
       name: "Feria Casabó - Pajas Blancas",
       location: "Camino Santa Catalina y Del Palangre",
       neighborhood: "casabo-pajas-blancas",
@@ -892,6 +1017,7 @@ export const markets: MarketsData = {
       lng: -56.1558,
     },
     {
+      id: "market-126",
       name: "Feria Cerro - Paso de la Arena",
       location: "Austria, Bogotá, China, Portugal",
       neighborhood: "cerro-paso-arena",
@@ -899,6 +1025,7 @@ export const markets: MarketsData = {
       lng: -56.0444,
     },
     {
+      id: "market-127",
       name: "Feria La Paloma - Tomkinson",
       location: "Paralela a Av. Luis Batlle Berres y Manuel Artigas",
       neighborhood: "la-paloma-tomkinson",
@@ -906,6 +1033,7 @@ export const markets: MarketsData = {
       lng: -56.1319,
     },
     {
+      id: "market-128",
       name: "Feria Barrio Sur",
       location: "Héctor Gutiérrez Ruiz entre Canelones y Maldonado",
       neighborhood: "barrio-sur",
@@ -913,6 +1041,7 @@ export const markets: MarketsData = {
       lng: -56.1881,
     },
     {
+      id: "market-129",
       name: "Feria Cordón",
       location: "Tristán Narvaja y Av. 18 de Julio",
       neighborhood: "cordon",
@@ -920,6 +1049,7 @@ export const markets: MarketsData = {
       lng: -56.1869,
     },
     {
+      id: "market-130",
       name: "Feria Villa Muñoz / Retiro",
       location: "Democracia, desde Hocquart hasta Gral. Pagola",
       neighborhood: "villa-munoz-retiro",
@@ -927,6 +1057,7 @@ export const markets: MarketsData = {
       lng: -56.1558,
     },
     {
+      id: "market-131",
       name: "Feria Larrañaga",
       location: "Ingavi, de Canstatt a Cno. Paso del Cuello",
       neighborhood: "larranaga",
@@ -934,6 +1065,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-132",
       name: "Feria Mercado Modelo / Bolívar",
       location: "Dr. Andrés Lamas desde Avda. Gral. Flores hasta la calle Dr. Francisco Lavandeira",
       neighborhood: "mercado-modelo-bolivar",
@@ -941,6 +1073,7 @@ export const markets: MarketsData = {
       lng: -56.1500,
     },
     {
+      id: "market-133",
       name: "Feria Capurro / Bella Vista",
       location: "Plaza Soldados Orientales de San Martin",
       neighborhood: "capurro-bella-vista",
@@ -948,6 +1081,7 @@ export const markets: MarketsData = {
       lng: -56.2000,
     },
     {
+      id: "market-134",
       name: "Feria Paso de la Arena",
       location: "Silvestre Ochoa y Av. Luis Batlle Berres",
       neighborhood: "paso-arena",
@@ -955,6 +1089,7 @@ export const markets: MarketsData = {
       lng: -56.0444,
     },
     {
+      id: "market-135",
       name: "Feria Pocitos",
       location: "Julio César desde el Nº 1432 hasta el Nº 1523 pasando 30 metros de la calle Demóstenes",
       neighborhood: "pocitos",
@@ -962,6 +1097,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-136",
       name: "Feria Punta Carretas",
       location: "Luis Franzini desde la calle Dr. Juan Dighiero hasta la calle Sarmiento",
       neighborhood: "punta-carretas",
@@ -969,6 +1105,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-137",
       name: "Feria Villa Biarritz",
       location: "Plaza Zorrilla de San Martín",
       neighborhood: "villa-biarritz",
@@ -976,6 +1113,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-138",
       name: "Feria Villa Biarritz",
       location: "Villa Biarritz",
       neighborhood: "villa-biarritz",
@@ -983,6 +1121,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-139",
       name: "Feria Manga - Toledo Chico",
       location: "Calle auxiliar de Av. de las Instrucciones desde su primer acceso por Av. de las Instrucciones metros después de la rotonda con Av. Belloni hasta el Nº 4259",
       neighborhood: "manga-toledo-chico",
@@ -990,6 +1129,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-140",
       name: "Feria Piedras Blancas",
       location: "Piedras Blancas",
       neighborhood: "piedras-blancas",
@@ -997,6 +1137,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-141",
       name: "Feria Cerrito",
       location: "Rafael Hortiguera desde Granaderos a Lancaster",
       neighborhood: "cerrito",
@@ -1004,6 +1145,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-142",
       name: "Feria Cerrito",
       location: "Francisco A. de Lemos, desde Guenoas hasta Chimborazo",
       neighborhood: "cerrito",
@@ -1011,6 +1153,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-143",
       name: "Feria Unión",
       location: "Joanicó, desde Pan de Azúcar hasta Av. Larravide",
       neighborhood: "union",
@@ -1018,6 +1161,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-144",
       name: "Feria Unión",
       location: "Asilo y Av. Luis Alberto de Herrera",
       neighborhood: "union",
@@ -1025,6 +1169,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-145",
       name: "Feria Malvín",
       location: "Río de la Plata desde la Av. Estanislao López hasta Enrique Legrand",
       neighborhood: "malvin",
@@ -1032,6 +1177,7 @@ export const markets: MarketsData = {
       lng: -56.1000,
     },
     {
+      id: "market-146",
       name: "Feria Carrasco",
       location: "Jamaica, desde Av. Juan Bautista Alberdi hasta Murillo",
       neighborhood: "carrasco",
@@ -1039,6 +1185,7 @@ export const markets: MarketsData = {
       lng: -56.0833,
     },
     {
+      id: "market-147",
       name: "Feria La Cruz de Carrasco",
       location: "Romildo Risso y Cno. Carrasco",
       neighborhood: "la-cruz-de-carrasco",
@@ -1046,6 +1193,7 @@ export const markets: MarketsData = {
       lng: -56.0833,
     },
     {
+      id: "market-148",
       name: "Feria Punta de Rieles - Bella Italia",
       location: "Cno. Guerra, desde Aries hasta pas. 40 metros de Leo",
       neighborhood: "punta-de-rieles-bella-italia",
@@ -1053,6 +1201,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-149",
       name: "Feria Barrio Conciliación",
       location: "Carafí y Bvar. Batlle y Ordóñez",
       neighborhood: "barrio-conciliacion",
@@ -1060,6 +1209,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-150",
       name: "Feria Peñarol y Lavalleja",
       location: "Bv. Aparicio Saravia desde Estrella del Sur a Watt",
       neighborhood: "penarol-lavalleja",
@@ -1067,6 +1217,7 @@ export const markets: MarketsData = {
       lng: -56.1167,
     },
     {
+      id: "market-151",
       name: "Feria Sayago",
       location: "Rosalía de Castro y Cno. Ariel",
       neighborhood: "sayago",

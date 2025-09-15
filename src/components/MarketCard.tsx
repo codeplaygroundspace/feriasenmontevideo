@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import type { Market } from "@/data";
 import { getDayName, getDayCardColor } from "@/data/days";
+import { ensureMarketHasId } from "@/lib/market-utils";
 import {
   Card,
   CardContent,
@@ -11,9 +13,10 @@ import {
 
 interface MarketCardProps {
   market: Market;
+  day: string;
 }
 
-const MarketCard: React.FC<MarketCardProps> = ({ market }) => {
+const MarketCard: React.FC<MarketCardProps> = ({ market, day }) => {
   const formatDistance = (distance?: number) => {
     if (!distance) return null;
     return distance < 1 
@@ -21,9 +24,11 @@ const MarketCard: React.FC<MarketCardProps> = ({ market }) => {
       : `${distance.toFixed(1)}km`;
   };
 
+  const marketWithId = ensureMarketHasId(market, day);
 
   return (
-    <Card className="hover:shadow-lg transition-shadow duration-200">
+    <Link href={`/market/${marketWithId.id}`} className="block">
+      <Card className="hover:shadow-lg transition-shadow duration-200 cursor-pointer">
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
           <CardTitle className="text-lg leading-tight">
@@ -119,6 +124,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ market }) => {
         </div>
       </CardContent>
     </Card>
+    </Link>
   );
 };
 
