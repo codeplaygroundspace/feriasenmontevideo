@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Header from "@/components/Header";
 import MarketsSection from "@/components/MarketsSection";
 import DynamicMarketsMap from "@/components/DynamicMarketsMap";
 import MarketsCardGrid from "@/components/MarketsCardGrid";
@@ -44,9 +43,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
-      
-      <div className="flex h-[calc(100vh-80px)]">
+      <div className="flex h-screen">
         {/* Sidebar */}
         <div className="w-80 overflow-y-auto">
           <MarketsSection 
@@ -70,12 +67,20 @@ export default function Home() {
                 userCoordinates={userCoordinates}
               />
             ) : (
-              <div className="p-6">
-                <MarketsCardGrid
-                  selectedDay={selectedDay}
-                  selectedNeighborhood={selectedNeighborhood}
-                  userCoordinates={userCoordinates}
-                />
+              <div className="h-full overflow-y-auto">
+                <div className="p-6">
+                  <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                    Ferias de Montevideo
+                  </h1>
+                  <p className="text-gray-600 mb-6">
+                    Descubre los mercados callejeros de la capital
+                  </p>
+                  <MarketsCardGrid
+                    selectedDay={selectedDay}
+                    selectedNeighborhood={selectedNeighborhood}
+                    userCoordinates={userCoordinates}
+                  />
+                </div>
               </div>
             )}
           </div>
