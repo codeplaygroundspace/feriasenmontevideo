@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { markets, dayNames, dayColors, type Market } from "@/data";
+import { markets } from "@/data";
+import { dayNames, dayColors, type Market } from "@/data";
 import NeighborhoodDropdown from "./NeighborhoodDropdown";
 import AddressInput from "./AddressInput";
 import { Switch } from "@/components/ui/switch";
@@ -26,7 +27,7 @@ const MarketsSection: React.FC<MarketsSectionProps> = ({
   currentAddress,
   currentView = "cards"
 }) => {
-  const [activeDay, setActiveDay] = useState<string>("all");
+  const [activeDay, setActiveDay] = useState<string>("tuesday");
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>("all");
 
   const handleDayClick = (day: string) => {

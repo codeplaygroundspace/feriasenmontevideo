@@ -21,15 +21,20 @@ import NeighborhoodDropdown from "@/components/NeighborhoodDropdown";
 import AddressInput from "@/components/AddressInput";
 import DynamicMarketsMap from "@/components/DynamicMarketsMap";
 import MarketsCardGrid from "@/components/MarketsCardGrid";
-import { markets, dayNames, type Market } from "@/data";
+import { markets } from "@/data";
+import { dayNames, type Market } from "@/data";
 import type { Coordinates } from "@/hooks/useAddressGeocoding";
+import { useMarkets } from "@/hooks/useMarkets";
 
 export default function Home() {
-  const [selectedDay, setSelectedDay] = useState<string>("all");
+  const [selectedDay, setSelectedDay] = useState<string>("tuesday");
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>("all");
   const [userAddress, setUserAddress] = useState<string>("");
   const [userCoordinates, setUserCoordinates] = useState<Coordinates | null>(null);
   const [currentView, setCurrentView] = useState<"map" | "cards">("cards");
+
+  // Use the markets hook
+  const { hasMarketsForDay, getMarketCountForDay } = useMarkets();
 
   const handleDayChange = (day: string, markets: Market[]) => {
     setSelectedDay(day);
@@ -65,10 +70,6 @@ export default function Home() {
         <SidebarHeader>
           <div className="flex items-center gap-2 px-2 py-2">
             <MapPin className="h-6 w-6 text-primary" />
-            <div>
-              <h2 className="text-lg font-semibold">Ferias de Montevideo</h2>
-              <p className="text-xs text-muted-foreground">Mercados callejeros</p>
-            </div>
           </div>
         </SidebarHeader>
 
@@ -133,18 +134,28 @@ export default function Home() {
             <SidebarGroupLabel>Día de la semana</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
-                {Object.keys(dayNames).map((day) => (
-                  <SidebarMenuItem key={day}>
-                    <SidebarMenuButton
-                      onClick={() => handleDayChange(day, [])}
-                      isActive={selectedDay === day}
-                      className="w-full justify-start"
-                    >
-                      <Calendar className="h-4 w-4" />
-                      <span>{dayNames[day as keyof typeof dayNames]}</span>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
+                {Object.keys(dayNames).map((day) => {
+                  const hasMarkets = hasMarketsForDay(day);
+                  const marketCount = getMarketCountForDay(day);
+                  return (
+                    <SidebarMenuItem key={day}>
+                      <SidebarMenuButton
+                        onClick={() => hasMarkets && handleDayChange(day, [])}
+                        isActive={selectedDay === day}
+                        disabled={!hasMarkets}
+                        className={`w-full justify-start ${!hasMarkets ? 'opacity-50 cursor-not-allowed' : ''}`}
+                      >
+                        <Calendar className="h-4 w-4" />
+                        <span>{dayNames[day as keyof typeof dayNames]}</span>
+                        {!hasMarkets ? (
+                          <span className="ml-auto text-xs text-muted-foreground">0</span>
+                        ) : (
+                          <span className="ml-auto text-xs text-muted-foreground">{marketCount}</span>
+                        )}
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  );
+                })}
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
@@ -205,12 +216,6 @@ export default function Home() {
             ) : (
               <div className="h-full overflow-y-auto">
                 <div className="p-6">
-                  <h1 className="text-2xl font-bold text-foreground mb-2">
-                    Ferias de Montevideo
-                  </h1>
-                  <p className="text-muted-foreground mb-6">
-                    Descubre los mercados callejeros de la capital
-                  </p>
                   <MarketsCardGrid
                     selectedDay={selectedDay}
                     selectedNeighborhood={selectedNeighborhood}

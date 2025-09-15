@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo } from "react";
-import { markets, dayNames, type Market } from "@/data";
+import { markets } from "@/data";
+import { dayNames, type Market } from "@/data";
 import MarketCard from "./MarketCard";
 
 interface MarketsCardGridProps {
@@ -16,25 +17,13 @@ const MarketsCardGrid: React.FC<MarketsCardGridProps> = ({
   userCoordinates,
 }) => {
   const filteredMarkets = useMemo(() => {
-    let allMarkets: Market[] = [];
+    let allMarkets: (Market & { day: string })[] = [];
 
-    // Get markets based on selected day
-    if (selectedDay === "all") {
-      // Get all markets from all days and add day information
-      Object.entries(markets).forEach(([day, dayMarkets]) => {
-        const marketsWithDay = dayMarkets.map(market => ({
-          ...market,
-          day: market.day || day // Use existing day or assign from the key
-        }));
-        allMarkets = [...allMarkets, ...marketsWithDay];
-      });
-    } else {
-      // Get markets for specific day and ensure they have day information
-      allMarkets = (markets[selectedDay] || []).map(market => ({
-        ...market,
-        day: market.day || selectedDay // Use existing day or assign from selected day
-      }));
-    }
+    // Get markets for the selected day
+    allMarkets = (markets[selectedDay] || []).map(market => ({
+      ...market,
+      day: selectedDay // Assign day from selected day
+    }));
 
     // Filter by neighborhood if not "all"
     if (selectedNeighborhood !== "all") {
@@ -119,7 +108,7 @@ const MarketsCardGrid: React.FC<MarketsCardGridProps> = ({
       {filteredMarkets.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
           {filteredMarkets.map((market, index) => (
-            <MarketCard key={`${market.name}-${market.location}-${index}`} market={market} />
+            <MarketCard key={`${market.name}-${market.location}-${index}`} market={market} day={market.day} />
           ))}
         </div>
       ) : (

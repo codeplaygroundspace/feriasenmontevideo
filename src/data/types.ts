@@ -1,4 +1,5 @@
 export interface Market {
+  id: string; // Required - each market has a unique ID
   name: string;
   location: string;
   neighborhood: string;

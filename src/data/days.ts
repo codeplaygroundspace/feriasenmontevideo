@@ -12,8 +12,7 @@ export const DAYS_OF_WEEK = [
 export type DayOfWeek = typeof DAYS_OF_WEEK[number];
 
 // Day names in Spanish
-export const dayNames: Record<DayOfWeek | 'all', string> = {
-  all: "Todos",
+export const dayNames: Record<DayOfWeek, string> = {
   monday: "Lunes",
   tuesday: "Martes",
   wednesday: "Miércoles",
@@ -24,8 +23,7 @@ export const dayNames: Record<DayOfWeek | 'all', string> = {
 };
 
 // Day colors for different UI contexts
-export const dayColors: Record<DayOfWeek | 'all', string> = {
-  all: "bg-gray-400",
+export const dayColors: Record<DayOfWeek, string> = {
   monday: "bg-red-400",
   tuesday: "bg-teal-400",
   wednesday: "bg-blue-400",
