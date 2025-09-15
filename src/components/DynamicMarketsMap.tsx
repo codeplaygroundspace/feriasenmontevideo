@@ -1,10 +1,12 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import type { Coordinates } from '@/hooks/useAddressGeocoding';
 
 interface DynamicMarketsMapProps {
   selectedDay?: string;
   selectedNeighborhood?: string;
+  userCoordinates?: Coordinates | null;
 }
 
 const MarketsMap = dynamic(() => import('./MarketsMap'), {
@@ -19,8 +21,8 @@ const MarketsMap = dynamic(() => import('./MarketsMap'), {
   ),
 });
 
-const DynamicMarketsMap: React.FC<DynamicMarketsMapProps> = ({ selectedDay, selectedNeighborhood }) => {
-  return <MarketsMap selectedDay={selectedDay} selectedNeighborhood={selectedNeighborhood} />;
+const DynamicMarketsMap: React.FC<DynamicMarketsMapProps> = ({ selectedDay, selectedNeighborhood, userCoordinates }) => {
+  return <MarketsMap selectedDay={selectedDay} selectedNeighborhood={selectedNeighborhood} userCoordinates={userCoordinates} />;
 };
 
 export default DynamicMarketsMap;

@@ -5,6 +5,8 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import { markets, dayNames, dayColors } from '../data/markets';
 import { Market } from '../data/types';
+import { calculateDistance, formatDistance, getDistanceColor, getDistanceLabel } from '../lib/distance';
+import type { Coordinates } from '../hooks/useAddressGeocoding';
 
 // Fix for default markers in react-leaflet
 delete (Icon.Default.prototype as any)._getIconUrl;
@@ -29,12 +31,29 @@ const createCustomIcon = (color: string) => new Icon({
   shadowSize: [41, 41]
 });
 
+// User location marker icon
+const userLocationIcon = new Icon({
+  iconUrl: `data:image/svg+xml;base64,${btoa(`
+    <svg width="25" height="41" viewBox="0 0 25 41" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#3b82f6" stroke="#fff" stroke-width="2" d="M12.5 0C5.6 0 0 5.6 0 12.5c0 12.5 12.5 28.5 12.5 28.5s12.5-16 12.5-28.5C25 5.6 19.4 0 12.5 0z"/>
+      <circle fill="#fff" cx="12.5" cy="12.5" r="6"/>
+      <circle fill="#3b82f6" cx="12.5" cy="12.5" r="3"/>
+    </svg>
+  `)}`,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+  shadowSize: [41, 41]
+});
+
 interface MarketsMapProps {
   selectedDay?: string;
   selectedNeighborhood?: string;
+  userCoordinates?: Coordinates | null;
 }
 
-const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNeighborhood = 'all' }) => {
+const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNeighborhood = 'all', userCoordinates }) => {
 
   // Get all markets with their day information
   const allMarketsWithDays = useMemo(() => {
@@ -51,18 +70,43 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNe
     return allMarkets;
   }, []);
 
-  // Filter markets based on selected day and neighborhood
+  // Filter markets based on selected day and neighborhood, and calculate distances
   const filteredMarkets = useMemo(() => {
-    return allMarketsWithDays.filter(({ market, days }) => {
-      // Handle day filtering
-      const dayMatch = selectedDay === 'all' || days.includes(selectedDay);
-      
-      // Handle neighborhood filtering
-      const neighborhoodMatch = selectedNeighborhood === 'all' || market.neighborhood === selectedNeighborhood;
-      
-      return dayMatch && neighborhoodMatch;
-    });
-  }, [allMarketsWithDays, selectedDay, selectedNeighborhood]);
+    return allMarketsWithDays
+      .filter(({ market, days }) => {
+        // Handle day filtering
+        const dayMatch = selectedDay === 'all' || days.includes(selectedDay);
+        
+        // Handle neighborhood filtering
+        const neighborhoodMatch = selectedNeighborhood === 'all' || market.neighborhood === selectedNeighborhood;
+        
+        return dayMatch && neighborhoodMatch;
+      })
+      .map(({ market, days }) => {
+        // Calculate distance if user coordinates are available
+        let distance: number | undefined;
+        if (userCoordinates) {
+          distance = calculateDistance(
+            userCoordinates.lat,
+            userCoordinates.lng,
+            market.lat,
+            market.lng
+          );
+        }
+        
+        return {
+          market: { ...market, distance },
+          days
+        };
+      })
+      .sort((a, b) => {
+        // Sort by distance if user coordinates are available
+        if (userCoordinates && a.market.distance !== undefined && b.market.distance !== undefined) {
+          return a.market.distance - b.market.distance;
+        }
+        return 0;
+      });
+  }, [allMarketsWithDays, selectedDay, selectedNeighborhood, userCoordinates]);
 
   // Get the most common color for a market (if it appears on multiple days)
   const getMarketColor = (days: string[]) => {
@@ -88,6 +132,25 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNe
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           
+          {/* User location marker */}
+          {userCoordinates && (
+            <Marker
+              position={[userCoordinates.lat, userCoordinates.lng]}
+              icon={userLocationIcon}
+            >
+              <Popup>
+                <div className="p-2">
+                  <h3 className="font-semibold text-lg text-blue-600 mb-2">
+                    📍 Tu ubicación
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Esta es tu ubicación actual
+                  </p>
+                </div>
+              </Popup>
+            </Marker>
+          )}
+
           {filteredMarkets.map(({ market, days }, index) => {
             const color = getMarketColor(days);
             const colorValue = color.replace('bg-', '#').replace('-400', '');
@@ -110,6 +173,17 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNe
                     <p className="text-sm text-blue-600 mb-3">
                       🏘️ {market.neighborhood.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
                     </p>
+                    
+                    {/* Distance information */}
+                    {market.distance !== undefined && (
+                      <div className="mb-3">
+                        <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getDistanceColor(market.distance)}`}>
+                          <span className="mr-1">📍</span>
+                          {formatDistance(market.distance)} - {getDistanceLabel(market.distance)}
+                        </div>
+                      </div>
+                    )}
+                    
                     <div className="mb-2">
                       <p className="text-sm font-medium text-gray-700 mb-1">
                         Día:
