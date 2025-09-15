@@ -43,12 +43,11 @@ const AddressInput: React.FC<AddressInputProps> = ({
 
   return (
     <div className="space-y-4">
-      <div>
-        <h3 className="text-lg font-semibold text-gray-800 mb-3">Mi Ubicación</h3>
+      
         <p className="text-sm text-gray-600 mb-4">
-          Ingresa tu dirección para ver qué tan lejos estás de cada feria
+          Ingresa tu dirección para ver qué tan lejos estás de cada feria.
         </p>
-      </div>
+      
 
       <form onSubmit={handleSubmit} className="space-y-3">
         <div>
