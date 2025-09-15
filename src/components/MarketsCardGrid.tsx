@@ -20,13 +20,20 @@ const MarketsCardGrid: React.FC<MarketsCardGridProps> = ({
 
     // Get markets based on selected day
     if (selectedDay === "all") {
-      // Get all markets from all days
-      Object.values(markets).forEach(dayMarkets => {
-        allMarkets = [...allMarkets, ...dayMarkets];
+      // Get all markets from all days and add day information
+      Object.entries(markets).forEach(([day, dayMarkets]) => {
+        const marketsWithDay = dayMarkets.map(market => ({
+          ...market,
+          day: market.day || day // Use existing day or assign from the key
+        }));
+        allMarkets = [...allMarkets, ...marketsWithDay];
       });
     } else {
-      // Get markets for specific day
-      allMarkets = markets[selectedDay] || [];
+      // Get markets for specific day and ensure they have day information
+      allMarkets = (markets[selectedDay] || []).map(market => ({
+        ...market,
+        day: market.day || selectedDay // Use existing day or assign from selected day
+      }));
     }
 
     // Filter by neighborhood if not "all"
