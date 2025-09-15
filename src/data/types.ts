@@ -1,6 +1,7 @@
 export interface Market {
   name: string;
   location: string;
+  neighborhood: string;
   lat: number;
   lng: number;
 }

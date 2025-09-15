@@ -1,29 +1,46 @@
 "use client";
 
+import { useState } from "react";
 import Header from "@/components/Header";
 import MarketsSection from "@/components/MarketsSection";
+import DynamicMarketsMap from "@/components/DynamicMarketsMap";
 import type { Market } from "@/data";
 
 export default function Home() {
+  const [selectedDay, setSelectedDay] = useState<string>("monday");
+  const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>("all");
+
   const handleDayChange = (day: string, markets: Market[]) => {
+    setSelectedDay(day);
     console.log(`Selected day: ${day}`, markets);
-    // Here you can add logic to update a map or other components
+  };
+
+  const handleNeighborhoodChange = (neighborhood: string) => {
+    setSelectedNeighborhood(neighborhood);
+    console.log(`Selected neighborhood: ${neighborhood}`);
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <MarketsSection onDayChange={handleDayChange} />
+      
+      <div className="flex h-[calc(100vh-80px)]">
+        {/* Sidebar */}
+        <div className="w-80 overflow-y-auto">
+          <MarketsSection 
+            onDayChange={handleDayChange} 
+            onNeighborhoodChange={handleNeighborhoodChange}
+          />
+        </div>
 
-      {/* Main content area - you can add your map or other components here */}
-      <div className="p-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-            Explore the Markets
-          </h2>
-          <p className="text-gray-600">
-            Select a day above to see which markets are open. This is where you can add your map component or other content to display the market locations.
-          </p>
+        {/* Map Area */}
+        <div className="flex-1 p-6">
+          <div className="h-full bg-white rounded-xl overflow-hidden">
+            <DynamicMarketsMap 
+              selectedDay={selectedDay} 
+              selectedNeighborhood={selectedNeighborhood}
+            />
+          </div>
         </div>
       </div>
     </div>
