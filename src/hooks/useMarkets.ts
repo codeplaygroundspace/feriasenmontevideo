@@ -46,6 +46,18 @@ export const useMarkets = () => {
     return Object.values(markets).reduce((total, dayMarkets) => total + dayMarkets.length, 0);
   };
 
+  /**
+   * Check if a specific day has markets in a specific neighborhood
+   */
+  const hasMarketsForDayInNeighborhood = (day: string, neighborhood: string): boolean => {
+    if (neighborhood === 'all') {
+      return hasMarketsForDay(day);
+    }
+    
+    const dayMarkets = markets[day] || [];
+    return dayMarkets.some(market => market.neighborhood === neighborhood);
+  };
+
   return {
     hasMarketsForDay,
     getMarketsForDay,
@@ -53,5 +65,6 @@ export const useMarkets = () => {
     getAllDaysWithoutMarkets,
     getMarketCountForDay,
     getTotalMarketCount,
+    hasMarketsForDayInNeighborhood,
   };
 };

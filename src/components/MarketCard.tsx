@@ -116,12 +116,6 @@ const MarketCard: React.FC<MarketCardProps> = ({ market, day }) => {
           </div>
         )}
 
-        {/* Coordinates (for debugging/development) */}
-        <div className="text-xs text-gray-400 pt-3 border-t border-gray-100">
-          <span className="font-mono">
-            {market.lat.toFixed(4)}, {market.lng.toFixed(4)}
-          </span>
-        </div>
       </CardContent>
     </Card>
     </Link>

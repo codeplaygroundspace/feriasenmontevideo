@@ -16,7 +16,7 @@ import {
   SidebarSeparator,
 } from "@/components/ui/sidebar";
 import { Switch } from "@/components/ui/switch";
-import { MapPin, Settings, Calendar, Map, List, Search, Heart } from "lucide-react";
+import { MapPin, Calendar, Map, List, MessageSquare } from "lucide-react";
 import NeighborhoodDropdown from "@/components/NeighborhoodDropdown";
 import AddressInput from "@/components/AddressInput";
 import DynamicMarketsMap from "@/components/DynamicMarketsMap";
@@ -34,7 +34,7 @@ export default function Home() {
   const [currentView, setCurrentView] = useState<"map" | "cards">("cards");
 
   // Use the markets hook
-  const { hasMarketsForDay, getMarketCountForDay } = useMarkets();
+  const { hasMarketsForDay, hasMarketsForDayInNeighborhood } = useMarkets();
 
   const handleDayChange = (day: string, markets: Market[]) => {
     setSelectedDay(day);
@@ -43,6 +43,18 @@ export default function Home() {
 
   const handleNeighborhoodChange = (neighborhood: string) => {
     setSelectedNeighborhood(neighborhood);
+    
+    // If the current selected day doesn't have markets in the new neighborhood,
+    // automatically select the first available day
+    if (!hasMarketsForDayInNeighborhood(selectedDay, neighborhood)) {
+      const availableDays = Object.keys(dayNames).filter(day => 
+        hasMarketsForDayInNeighborhood(day, neighborhood)
+      );
+      if (availableDays.length > 0) {
+        setSelectedDay(availableDays[0]);
+      }
+    }
+    
     console.log(`Selected neighborhood: ${neighborhood}`);
   };
 
@@ -98,21 +110,25 @@ export default function Home() {
 
           <SidebarSeparator />
 
-          {/* Address Input Section */}
-          <SidebarGroup>
-            <SidebarGroupLabel>Ubicación</SidebarGroupLabel>
-            <SidebarGroupContent>
-              <div className="px-2">
-                <AddressInput
-                  onAddressSubmit={handleAddressChange}
-                  onClearAddress={handleClearAddress}
-                  currentAddress={userAddress}
-                />
-              </div>
-            </SidebarGroupContent>
-          </SidebarGroup>
+          {/* Address Input Section - Only show when map view is active */}
+          {currentView === "map" && (
+            <>
+              <SidebarGroup>
+                <SidebarGroupLabel>Ubicación</SidebarGroupLabel>
+                <SidebarGroupContent>
+                  <div className="px-2">
+                    <AddressInput
+                      onAddressSubmit={handleAddressChange}
+                      onClearAddress={handleClearAddress}
+                      currentAddress={userAddress}
+                    />
+                  </div>
+                </SidebarGroupContent>
+              </SidebarGroup>
 
-          <SidebarSeparator />
+              <SidebarSeparator />
+            </>
+          )}
 
           {/* Neighborhood Section */}
           <SidebarGroup>
@@ -135,8 +151,7 @@ export default function Home() {
             <SidebarGroupContent>
               <SidebarMenu>
                 {Object.keys(dayNames).map((day) => {
-                  const hasMarkets = hasMarketsForDay(day);
-                  const marketCount = getMarketCountForDay(day);
+                  const hasMarkets = hasMarketsForDayInNeighborhood(day, selectedNeighborhood);
                   return (
                     <SidebarMenuItem key={day}>
                       <SidebarMenuButton
@@ -147,10 +162,8 @@ export default function Home() {
                       >
                         <Calendar className="h-4 w-4" />
                         <span>{dayNames[day as keyof typeof dayNames]}</span>
-                        {!hasMarkets ? (
-                          <span className="ml-auto text-xs text-muted-foreground">0</span>
-                        ) : (
-                          <span className="ml-auto text-xs text-muted-foreground">{marketCount}</span>
+                        {!hasMarkets && (
+                          <span className="ml-auto text-xs text-muted-foreground">Sin ferias</span>
                         )}
                       </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -162,21 +175,18 @@ export default function Home() {
 
           <SidebarSeparator />
 
-          {/* Quick Actions */}
+          {/* Feedback */}
           <SidebarGroup>
-            <SidebarGroupLabel>Acciones Rápidas</SidebarGroupLabel>
+            <SidebarGroupLabel>Feedback</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
                 <SidebarMenuItem>
-                  <SidebarMenuButton className="w-full justify-start">
-                    <Search className="h-4 w-4" />
-                    <span>Buscar Ferias</span>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-                <SidebarMenuItem>
-                  <SidebarMenuButton className="w-full justify-start">
-                    <Heart className="h-4 w-4" />
-                    <span>Favoritos</span>
+                  <SidebarMenuButton 
+                    className="w-full justify-start"
+                    onClick={() => window.open('https://github.com/codeplaygroundspace/feriasdemontevideo', '_blank')}
+                  >
+                    <MessageSquare className="h-4 w-4" />
+                    <span>Feedback</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               </SidebarMenu>
@@ -184,16 +194,6 @@ export default function Home() {
           </SidebarGroup>
         </SidebarContent>
 
-        <SidebarFooter>
-          <SidebarMenu>
-            <SidebarMenuItem>
-              <SidebarMenuButton className="w-full justify-start">
-                <Settings className="h-4 w-4" />
-                <span>Configuración</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          </SidebarMenu>
-        </SidebarFooter>
       </Sidebar>
 
       {/* Main Content Area with Map/Grid */}

@@ -80,9 +80,10 @@ const AddressInput: React.FC<AddressInputProps> = ({
             onClick={handleUseCurrentLocation}
             disabled={isLoading}
             variant="outline"
-            className="flex-1"
+            className="px-3"
+            title="Usar ubicación actual"
           >
-            {isLoading ? "..." : "📍 Ubicación actual"}
+            {isLoading ? "..." : "📍"}
           </Button>
         </div>
       </form>
