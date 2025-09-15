@@ -3,13 +3,29 @@
 import { useState } from "react";
 import { markets, dayNames, dayColors, type Market } from "@/data";
 import NeighborhoodDropdown from "./NeighborhoodDropdown";
+import AddressInput from "./AddressInput";
+import { Switch } from "@/components/ui/switch";
+import type { Coordinates } from "@/hooks/useAddressGeocoding";
 
 interface MarketsSectionProps {
   onDayChange?: (day: string, markets: Market[]) => void;
   onNeighborhoodChange?: (neighborhood: string) => void;
+  onAddressChange?: (address: string, coordinates: Coordinates) => void;
+  onClearAddress?: () => void;
+  onViewChange?: (view: "map" | "cards") => void;
+  currentAddress?: string;
+  currentView?: "map" | "cards";
 }
 
-const MarketsSection: React.FC<MarketsSectionProps> = ({ onDayChange, onNeighborhoodChange }) => {
+const MarketsSection: React.FC<MarketsSectionProps> = ({ 
+  onDayChange, 
+  onNeighborhoodChange, 
+  onAddressChange, 
+  onClearAddress,
+  onViewChange,
+  currentAddress,
+  currentView = "map"
+}) => {
   const [activeDay, setActiveDay] = useState<string>("all");
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>("all");
 
@@ -25,10 +41,40 @@ const MarketsSection: React.FC<MarketsSectionProps> = ({ onDayChange, onNeighbor
     onNeighborhoodChange?.(neighborhood);
   };
 
+  const handleViewToggle = (checked: boolean) => {
+    const newView = checked ? "cards" : "map";
+    onViewChange?.(newView);
+  };
 
   return (
     <div className="p-6">
       <div className="flex flex-col gap-6">
+        {/* View Toggle */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-800 mb-3">Vista</h3>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <span className={`text-sm font-medium ${currentView === "map" ? "text-gray-900" : "text-gray-500"}`}>
+                Mapa
+              </span>
+              <Switch
+                checked={currentView === "cards"}
+                onCheckedChange={handleViewToggle}
+                size="md"
+              />
+              <span className={`text-sm font-medium ${currentView === "cards" ? "text-gray-900" : "text-gray-500"}`}>
+                Lista
+              </span>
+            </div>
+          </div>
+        </div>
+        {/* Address Input */}
+        <AddressInput
+          onAddressSubmit={onAddressChange || (() => {})}
+          onClearAddress={onClearAddress || (() => {})}
+          currentAddress={currentAddress}
+        />
+
         {/* Neighborhood Dropdown */}
         <div>
           <h3 className="text-lg font-semibold text-gray-800 mb-3">Barrio</h3>

@@ -5,6 +5,7 @@ export interface Market {
   lat: number;
   lng: number;
   day?: string;
+  distance?: number; // Distance from user's location in kilometers
 }
 
 export interface MarketsData {
