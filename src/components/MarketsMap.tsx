@@ -1,11 +1,13 @@
 'use client';
 
 import { useMemo } from 'react';
+import Link from 'next/link';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import { markets, dayNames, dayColors } from '../data/markets';
 import { Market } from '../data/types';
 import { calculateDistance, formatDistance, getDistanceColor, getDistanceLabel } from '../lib/distance';
+import { ensureMarketHasId } from '../lib/market-utils';
 import type { Coordinates } from '../hooks/useAddressGeocoding';
 
 // Fix for default markers in react-leaflet
@@ -54,6 +56,19 @@ interface MarketsMapProps {
 }
 
 const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'tuesday', selectedNeighborhood = 'all', userCoordinates }) => {
+  
+  // Helper function to get background color for map popup distance badges
+  const getDistanceBackgroundColor = (distance: number): string => {
+    if (distance <= 1) {
+      return "bg-green-600";
+    } else if (distance <= 3) {
+      return "bg-yellow-600";
+    } else if (distance <= 5) {
+      return "bg-orange-600";
+    } else {
+      return "bg-red-600";
+    }
+  };
 
   // Get all markets with their day information
   const allMarketsWithDays = useMemo(() => {
@@ -155,6 +170,7 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'tuesday', select
             const color = getMarketColor(days);
             const colorValue = color.replace('bg-', '#').replace('-400', '');
             const icon = createCustomIcon(colorValue);
+            const marketWithId = ensureMarketHasId(market, market.day || '');
             
             return (
               <Marker
@@ -177,14 +193,14 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'tuesday', select
                     {/* Distance information */}
                     {market.distance !== undefined && (
                       <div className="mb-3">
-                        <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getDistanceColor(market.distance)}`}>
+                        <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium text-white ${getDistanceBackgroundColor(market.distance)}`}>
                           <span className="mr-1">📍</span>
                           {formatDistance(market.distance)} - {getDistanceLabel(market.distance)}
                         </div>
                       </div>
                     )}
                     
-                    <div className="mb-2">
+                    <div className="mb-3">
                       <p className="text-sm font-medium text-gray-700 mb-1">
                         Día:
                       </p>
@@ -198,6 +214,14 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'tuesday', select
                         )}
                       </div>
                     </div>
+                    
+                    {/* Link to market detail page */}
+                    <Link 
+                      href={`/market/${marketWithId.id}`}
+                      className="inline-block w-full text-center bg-stone-100 hover:bg-stone-200 text-white text-sm font-medium py-2 px-4 rounded-md transition-colors duration-200"
+                    >
+                      Ver detalles
+                    </Link>
                   </div>
                 </Popup>
               </Marker>

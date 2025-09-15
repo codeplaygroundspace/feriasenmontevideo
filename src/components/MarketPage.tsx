@@ -1,8 +1,6 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import type { Market } from "@/data";
 import { getDayName, getDayCardColor } from "@/data/days";
 import {
@@ -12,7 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, MapPin, Calendar, Navigation, Share2, Heart } from "lucide-react";
+import { MapPin, Calendar, Navigation } from "lucide-react";
 
 interface MarketPageProps {
   market: Market;
@@ -21,28 +19,16 @@ interface MarketPageProps {
 }
 
 const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) => {
-  const router = useRouter();
-  const [isFavorite, setIsFavorite] = useState(false);
-
   // Safety check for market data
   if (!market) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center space-y-6 max-w-md mx-auto px-4">
-          <div className="space-y-2">
-            <MapPin className="h-16 w-16 text-muted-foreground mx-auto" />
-            <h1 className="text-2xl font-bold">Mercado no encontrado</h1>
-            <p className="text-muted-foreground">
-              No se pudo cargar la información del mercado.
-            </p>
-          </div>
-          
-          <div className="space-y-4">
-            <Button onClick={() => router.back()} className="w-full">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Volver
-            </Button>
-          </div>
+      <div className="text-center space-y-6 max-w-md mx-auto px-4">
+        <div className="space-y-2">
+          <MapPin className="h-16 w-16 text-muted-foreground mx-auto" />
+          <h1 className="text-2xl font-bold">Mercado no encontrado</h1>
+          <p className="text-muted-foreground">
+            No se pudo cargar la información del mercado.
+          </p>
         </div>
       </div>
     );
@@ -55,75 +41,13 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
       : `${distance.toFixed(1)}km`;
   };
 
-  const handleBackClick = () => {
-    router.back();
-  };
-
-  const handleShareClick = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: market.name,
-        text: `Mira este mercado en ${market.location}`,
-        url: window.location.href,
-      });
-    } else {
-      navigator.clipboard.writeText(window.location.href);
-      // You could add a toast notification here
-    }
-  };
-
-  const handleFavoriteClick = () => {
-    setIsFavorite(!isFavorite);
-    // You could implement actual favorite functionality here
-  };
-
   const handleDirectionsClick = () => {
     const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${market.lat},${market.lng}`;
     window.open(mapsUrl, '_blank');
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header with back button */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleBackClick}
-                className="flex items-center gap-2"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                Volver
-              </Button>
-              <div className="h-6 w-px bg-border" />
-              <h1 className="text-lg font-semibold">Detalles del Mercado</h1>
-            </div>
-            <div className="flex items-center gap-2">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleFavoriteClick}
-                className={isFavorite ? "text-red-500" : ""}
-              >
-                <Heart className={`h-4 w-4 ${isFavorite ? "fill-current" : ""}`} />
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleShareClick}
-              >
-                <Share2 className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
+    <>
           {/* Main Market Information */}
           <Card className="mb-8">
             <CardHeader className="pb-4">
@@ -219,13 +143,6 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
 
                 <div className="space-y-4">
                   <div className="bg-muted/50 rounded-lg p-4">
-                    <h3 className="font-semibold text-foreground mb-2">Coordenadas</h3>
-                    <p className="text-sm text-muted-foreground font-mono">
-                      {market.lat.toFixed(6)}, {market.lng.toFixed(6)}
-                    </p>
-                  </div>
-                  
-                  <div className="bg-muted/50 rounded-lg p-4">
                     <h3 className="font-semibold text-foreground mb-2">Información del Mercado</h3>
                     <p className="text-sm text-muted-foreground">
                       Este es un mercado callejero tradicional de Montevideo. 
@@ -271,9 +188,7 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
               </div>
             </div>
           )}
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
