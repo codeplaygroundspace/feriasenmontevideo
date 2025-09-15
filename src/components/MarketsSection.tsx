@@ -24,7 +24,7 @@ const MarketsSection: React.FC<MarketsSectionProps> = ({
   onClearAddress,
   onViewChange,
   currentAddress,
-  currentView = "map"
+  currentView = "cards"
 }) => {
   const [activeDay, setActiveDay] = useState<string>("all");
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>("all");

@@ -111,10 +111,10 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNe
   // Get the most common color for a market (if it appears on multiple days)
   const getMarketColor = (days: string[]) => {
     if (days.length === 1) {
-      return dayColors[days[0]];
+      return dayColors[days[0] as keyof typeof dayColors] || dayColors.all;
     }
     // For markets on multiple days, use the first day's color
-    return dayColors[days[0]];
+    return dayColors[days[0] as keyof typeof dayColors] || dayColors.all;
   };
 
   return (
@@ -191,9 +191,9 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNe
                       <div className="flex flex-wrap gap-1">
                         {market.day && (
                           <span
-                            className={`px-2 py-1 rounded text-xs font-medium text-white ${dayColors[market.day]}`}
+                            className={`px-2 py-1 rounded text-xs font-medium text-white ${dayColors[market.day as keyof typeof dayColors] || dayColors.all}`}
                           >
-                            {dayNames[market.day]}
+                            {dayNames[market.day as keyof typeof dayNames] || "N/A"}
                           </span>
                         )}
                       </div>
