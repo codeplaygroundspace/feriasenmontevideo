@@ -85,12 +85,9 @@ const MarketsCardGrid: React.FC<MarketsCardGridProps> = ({
   };
 
   return (
-    <div className="h-full flex flex-col">
-      {/* Header */}
+    <div>
+      {/* Filter Info */}
       <div className="mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
-          Ferias de Montevideo
-        </h2>
         <div className="flex flex-wrap gap-4 text-sm text-gray-600">
           <span className="flex items-center gap-1">
             <span className="font-medium">Día:</span>
@@ -120,15 +117,13 @@ const MarketsCardGrid: React.FC<MarketsCardGridProps> = ({
 
       {/* Markets Grid */}
       {filteredMarkets.length > 0 ? (
-        <div className="flex-1 overflow-y-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
-            {filteredMarkets.map((market, index) => (
-              <MarketCard key={`${market.name}-${market.location}-${index}`} market={market} />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
+          {filteredMarkets.map((market, index) => (
+            <MarketCard key={`${market.name}-${market.location}-${index}`} market={market} />
+          ))}
         </div>
       ) : (
-        <div className="flex-1 flex items-center justify-center">
+        <div className="flex items-center justify-center py-12">
           <div className="text-center">
             <svg 
               className="w-16 h-16 text-gray-300 mx-auto mb-4" 
