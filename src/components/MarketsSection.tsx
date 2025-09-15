@@ -10,12 +10,14 @@ interface MarketsSectionProps {
 }
 
 const MarketsSection: React.FC<MarketsSectionProps> = ({ onDayChange, onNeighborhoodChange }) => {
-  const [activeDay, setActiveDay] = useState<string>("monday");
+  const [activeDay, setActiveDay] = useState<string>("all");
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>("all");
 
   const handleDayClick = (day: string) => {
     setActiveDay(day);
-    onDayChange?.(day, markets[day]);
+    // Pass the day selection to the parent component
+    // The map will handle the filtering internally
+    onDayChange?.(day, []);
   };
 
   const handleNeighborhoodChange = (neighborhood: string) => {

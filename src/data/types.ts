@@ -4,6 +4,7 @@ export interface Market {
   neighborhood: string;
   lat: number;
   lng: number;
+  day?: string;
 }
 
 export interface MarketsData {

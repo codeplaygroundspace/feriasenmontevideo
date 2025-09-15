@@ -21,7 +21,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Ferias de Montevideo",
-  description: "Descubre los mercados callejeros de la capital",
+  description: "Descubre los mercados callejeros y ferias de Montevideo, Uruguay. Información completa sobre ubicaciones, horarios y productos locales. Encuentra las mejores ferias por barrio y día de la semana.",
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased`}
       >
