@@ -1,4 +1,5 @@
-import { MarketsData, DayNames, DayColors } from "./types";
+import { MarketsData } from "./types";
+import { dayNames, dayColors } from "./days";
 
 export const markets: MarketsData = {
   monday: [
@@ -11,7 +12,6 @@ export const markets: MarketsData = {
       neighborhood: "belvedere",
       lat: -34.9176,
       lng: -56.1528,
-      day: "tuesday",
     },
     {
       name: "Feria Cerro - Paso de la Arena",
@@ -1076,24 +1076,5 @@ export const markets: MarketsData = {
   ],
 };
 
-export const dayNames: DayNames = {
-  all: "Todos",
-  monday: "Lunes",
-  tuesday: "Martes",
-  wednesday: "Miércoles",
-  thursday: "Jueves",
-  friday: "Viernes",
-  saturday: "Sábado",
-  sunday: "Domingo",
-};
-
-export const dayColors: DayColors = {
-  all: "bg-gray-400",
-  monday: "bg-red-400",
-  tuesday: "bg-teal-400",
-  wednesday: "bg-blue-400",
-  thursday: "bg-green-400",
-  friday: "bg-yellow-400",
-  saturday: "bg-pink-400",
-  sunday: "bg-indigo-400",
-};
+// Re-export day data from centralized location
+export { dayNames, dayColors } from "./days";

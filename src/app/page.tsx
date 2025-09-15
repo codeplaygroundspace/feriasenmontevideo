@@ -13,7 +13,7 @@ export default function Home() {
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>("all");
   const [userAddress, setUserAddress] = useState<string>("");
   const [userCoordinates, setUserCoordinates] = useState<Coordinates | null>(null);
-  const [currentView, setCurrentView] = useState<"map" | "cards">("map");
+  const [currentView, setCurrentView] = useState<"map" | "cards">("cards");
 
   const handleDayChange = (day: string, markets: Market[]) => {
     setSelectedDay(day);

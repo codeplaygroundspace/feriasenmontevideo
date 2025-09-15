@@ -1,6 +1,7 @@
 "use client";
 
 import type { Market } from "@/data";
+import { getDayName, getDayCardColor } from "@/data/days";
 import {
   Card,
   CardContent,
@@ -20,31 +21,6 @@ const MarketCard: React.FC<MarketCardProps> = ({ market }) => {
       : `${distance.toFixed(1)}km`;
   };
 
-  const getDayColor = (day?: string) => {
-    const colors: { [key: string]: string } = {
-      monday: "bg-gray-100 text-gray-800",
-      tuesday: "bg-blue-100 text-blue-800",
-      wednesday: "bg-green-100 text-green-800",
-      thursday: "bg-yellow-100 text-yellow-800",
-      friday: "bg-orange-100 text-orange-800",
-      saturday: "bg-purple-100 text-purple-800",
-      sunday: "bg-red-100 text-red-800",
-    };
-    return colors[day || ""] || "bg-gray-100 text-gray-800";
-  };
-
-  const getDayName = (day?: string) => {
-    const dayNames: { [key: string]: string } = {
-      monday: "Lunes",
-      tuesday: "Martes",
-      wednesday: "Miércoles",
-      thursday: "Jueves",
-      friday: "Viernes",
-      saturday: "Sábado",
-      sunday: "Domingo",
-    };
-    return dayNames[day || ""] || "N/A";
-  };
 
   return (
     <Card className="hover:shadow-lg transition-shadow duration-200">
@@ -54,7 +30,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ market }) => {
             {market.name}
           </CardTitle>
           {market.day && (
-            <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDayColor(market.day)}`}>
+            <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDayCardColor(market.day)}`}>
               {getDayName(market.day)}
             </span>
           )}
