@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar";
 import {
   Sidebar,
@@ -16,13 +17,6 @@ import {
   SidebarSeparator,
 } from "@/components/ui/sidebar";
 import { Switch } from "@/components/ui/switch";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import { MapPin, Calendar, Map, List, MessageSquare, Info } from "lucide-react";
 import NeighborhoodDropdown from "@/components/NeighborhoodDropdown";
 import AddressInput from "@/components/AddressInput";
@@ -39,7 +33,6 @@ export default function Home() {
   const [userAddress, setUserAddress] = useState<string>("");
   const [userCoordinates, setUserCoordinates] = useState<Coordinates | null>(null);
   const [currentView, setCurrentView] = useState<"map" | "cards">("cards");
-  const [showAboutModal, setShowAboutModal] = useState<boolean>(false);
 
   // Use the markets hook
   const { hasMarketsForDay, hasMarketsForDayInNeighborhood } = useMarkets();
@@ -231,11 +224,13 @@ export default function Home() {
               <SidebarMenu>
                 <SidebarMenuItem>
                   <SidebarMenuButton 
+                    asChild
                     className="w-full justify-start"
-                    onClick={() => setShowAboutModal(true)}
                   >
-                    <Info className="h-4 w-4" />
-                    <span>Acerca de</span>
+                    <Link href="/acerca-de">
+                      <Info className="h-4 w-4" />
+                      <span>Acerca de</span>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               </SidebarMenu>
@@ -276,75 +271,6 @@ export default function Home() {
           </div>
         </div>
       </SidebarInset>
-
-      {/* About Modal */}
-      <Dialog open={showAboutModal} onOpenChange={setShowAboutModal}>
-        <DialogContent className="max-w-2xl">
-          <DialogHeader>
-            <DialogTitle className="text-2xl font-bold">Acerca de Ferias de Montevideo</DialogTitle>
-            <DialogDescription>
-              Descubre la historia y propósito de esta plataforma
-            </DialogDescription>
-          </DialogHeader>
-          
-          <div className="space-y-4 text-sm leading-relaxed">
-            <div>
-              <h3 className="font-semibold text-lg mb-2">¿Qué es Ferias de Montevideo?</h3>
-              <p>
-                Ferias de Montevideo es una plataforma digital que te ayuda a descubrir y explorar 
-                todas las ferias y mercados callejeros de la ciudad. Nuestro objetivo es conectar 
-                a los montevideanos con los productores locales y facilitar el acceso a productos 
-                frescos y artesanales.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-lg mb-2">¿Qué puedes hacer aquí?</h3>
-              <ul className="list-disc list-inside space-y-1 ml-4">
-                <li>Explorar todas las ferias disponibles en Montevideo</li>
-                <li>Filtrar por día de la semana y barrio</li>
-                <li>Ver la ubicación exacta de cada feria en el mapa</li>
-                <li>Encontrar ferias cerca de tu ubicación</li>
-                <li>Conocer horarios y detalles de cada mercado</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-lg mb-2">¿Por qué creamos esta plataforma?</h3>
-              <p>
-                Creemos que las ferias son una parte fundamental de la cultura montevideana y 
-                una excelente manera de apoyar a los productores locales. Queremos hacer que 
-                sea más fácil para todos descubrir y disfrutar de estos espacios únicos de la ciudad.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-lg mb-2">¿Cómo funciona?</h3>
-              <p>
-                Utilizamos datos oficiales y actualizados de las ferias de Montevideo para 
-                brindarte información precisa sobre ubicaciones, horarios y días de funcionamiento. 
-                Puedes filtrar por día para planificar tus visitas o explorar por barrio para 
-                encontrar ferias cerca de ti.
-              </p>
-            </div>
-
-            <div className="pt-4 border-t">
-              <p className="text-muted-foreground text-xs">
-                ¿Tienes sugerencias o encontraste algún error? 
-                <button 
-                  onClick={() => {
-                    setShowAboutModal(false);
-                    window.open('https://github.com/codeplaygroundspace/feriasdemontevideo', '_blank');
-                  }}
-                  className="text-blue-600 hover:underline ml-1"
-                >
-                  Envíanos tu feedback
-                </button>
-              </p>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
     </SidebarProvider>
   );
 }
