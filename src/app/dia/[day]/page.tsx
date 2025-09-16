@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { markets } from "@/data";
 import { dayNames } from "@/data/days";
 import Breadcrumb from "@/components/Breadcrumb";
+import MarketCard from "@/components/MarketCard";
 import { Metadata } from "next";
 
 interface DayPageProps {
@@ -81,31 +82,19 @@ export default async function DayPage({ params }: DayPageProps) {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {neighborhoods.map(neighborhood => {
-          const neighborhoodMarkets = dayMarkets.filter(market => market.neighborhood === neighborhood);
+        {dayMarkets.map((market, index) => {
+          // Create market object with day property
+          const marketWithDay = {
+            ...market,
+            day: day
+          };
+          
           return (
-            <div key={neighborhood} className="space-y-4">
-              <h2 className="text-xl font-semibold capitalize">
-                {neighborhood.replace(/-/g, " ")}
-              </h2>
-              <div className="space-y-3">
-                {neighborhoodMarkets.map(market => (
-                  <div key={market.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
-                    <h3 className="font-medium mb-2">{market.name}</h3>
-                    <p className="text-sm text-muted-foreground mb-2">{market.location}</p>
-                    <p className="text-sm font-mono text-muted-foreground">
-                      {market.beginningTime} - {market.endTime}
-                    </p>
-                    <a 
-                      href={`/feria/${market.id}`}
-                      className="text-primary text-sm hover:underline"
-                    >
-                      Ver detalles →
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <MarketCard 
+              key={`${market.name}-${market.location}-${index}`} 
+              market={marketWithDay} 
+              day={day} 
+            />
           );
         })}
       </div>

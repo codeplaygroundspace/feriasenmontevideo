@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   transpilePackages: ['leaflet'],
   images: {
-    domains: ['dynamic-media-cdn.tripadvisor.com'],
+    domains: ['dynamic-media-cdn.tripadvisor.com', 'lh3.googleusercontent.com', 'streetviewpixels-pa.googleapis.com'],
     formats: ['image/webp', 'image/avif'],
   },
   experimental: {
