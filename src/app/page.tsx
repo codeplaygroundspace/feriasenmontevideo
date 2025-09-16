@@ -205,8 +205,8 @@ export default function Home() {
         </header>
 
         {/* Main Content with Rounded Borders */}
-        <div className="flex-4">
-          <div className="h-full bg-card rounded-xl overflow-hidden">
+        <div className="flex-1">
+          <div className="h-full bg-card rounded-xl overflow-hidden m-6">
             {currentView === "map" ? (
               <DynamicMarketsMap 
                 selectedDay={selectedDay} 
@@ -215,7 +215,7 @@ export default function Home() {
               />
             ) : (
               <div className="h-full overflow-y-auto">
-                <div className="p-6">
+                <div className="p-2">
                   <MarketsCardGrid
                     selectedDay={selectedDay}
                     selectedNeighborhood={selectedNeighborhood}
