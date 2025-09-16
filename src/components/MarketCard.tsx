@@ -27,7 +27,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ market, day }) => {
   const marketWithId = ensureMarketHasId(market, day);
 
   return (
-    <Link href={`/market/${marketWithId.id}`} className="block">
+    <Link href={`/feria/${marketWithId.id}`} className="block">
       <Card className="hover:shadow-lg transition-shadow duration-200 cursor-pointer">
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
