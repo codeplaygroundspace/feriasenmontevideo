@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Calendar, Navigation, Instagram, ExternalLink } from "lucide-react";
+import { MapPin, Calendar, Navigation, Instagram, ExternalLink, Map } from "lucide-react";
 
 interface MarketPageProps {
   market: Market;
@@ -207,8 +207,19 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
                 </div>
                 
                 {/* Social Media Links */}
-                {(market.instagramUrl || market.tripAdvisorUrl) && (
+                {(market.instagramUrl || market.tripAdvisorUrl || market.googleMapURL) && (
                   <div className="flex flex-wrap gap-3">
+                    {market.googleMapURL && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex items-center gap-2"
+                        onClick={() => window.open(market.googleMapURL, '_blank')}
+                      >
+                        <Map className="h-4 w-4" />
+                        Ver en Google Maps
+                      </Button>
+                    )}
                     {market.instagramUrl && (
                       <Button
                         variant="outline"

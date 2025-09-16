@@ -18,6 +18,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "https://www.google.com/maps/place/Villavicencio+y+Santa+Lucía,+Montevideo,+Uruguay/@-34.8498386,-56.229233,17z",
     },
     {
       id: "market-002",
@@ -31,6 +32,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "https://www.google.com/maps/place/Polonia+y+Carlos+María+Ramírez,+Montevideo,+Uruguay/@-34.8889,-56.0444,17z",
     },
     {
       id: "market-003",
@@ -44,6 +46,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "https://www.google.com/maps/place/Durazno+entre+Convención+y+Wilson+Ferreira+Aldunate,+Montevideo,+Uruguay/@-34.9011,-56.1881,17z",
     },
     {
       id: "market-004",
@@ -57,6 +60,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "https://www.google.com/maps/place/Bartolomé+Mitre+entre+Cerrito+y+Piedras,+Montevideo,+Uruguay/@-34.9059,-56.2081,17z",
     },
     {
       id: "market-005",
@@ -70,6 +74,7 @@ export const markets: MarketsData = {
       imageUrl: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npkE0UittHX9UCiPGltvYiPOeK1I_ildgMcwQ-BACeqQKj8bEnUN4Jx3C39se5ZbKziOAXCoYbAnEfYRHRhALcuvP3CTLHL7dlpeGYxIZH7IY76UKbXHOzxSX19C_NSbwNtxio=w408-h306-k-no",
       instagramUrl: "https://maps.app.goo.gl/N1F53pPKVrJezp7k7",
       tripAdvisorUrl: "",
+      googleMapURL: "https://www.google.com/maps/place/Martínez+Trueba+y+Canelones,+Montevideo,+Uruguay/@-34.9091247,-56.1834463,17z",
     },
     {
       id: "market-006",
@@ -83,6 +88,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-007",
@@ -96,6 +102,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-008",
@@ -109,6 +116,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-009",
@@ -122,6 +130,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-010",
@@ -135,6 +144,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-011",
@@ -148,6 +158,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-012",
@@ -161,6 +172,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-013",
@@ -174,6 +186,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-014",
@@ -187,6 +200,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-015",
@@ -200,6 +214,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-016",
@@ -213,6 +228,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-017",
@@ -226,6 +242,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-018",
@@ -239,6 +256,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-019",
@@ -252,6 +270,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
   ],
   wednesday: [
@@ -267,6 +286,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-021",
@@ -280,6 +300,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-022",
@@ -293,6 +314,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-023",
@@ -306,6 +328,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-024",
@@ -319,6 +342,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-025",
@@ -332,6 +356,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-026",
@@ -345,6 +370,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-027",
@@ -358,6 +384,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-028",
@@ -371,6 +398,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-029",
@@ -384,6 +412,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-030",
@@ -397,6 +426,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-031",
@@ -410,6 +440,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-032",
@@ -423,6 +454,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-033",
@@ -436,6 +468,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-034",
@@ -449,6 +482,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-035",
@@ -462,6 +496,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-036",
@@ -475,6 +510,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-037",
@@ -488,6 +524,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-038",
@@ -501,6 +538,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-039",
@@ -514,6 +552,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-040",
@@ -527,6 +566,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-041",
@@ -540,6 +580,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-042",
@@ -553,6 +594,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-043",
@@ -566,6 +608,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-044",
@@ -579,6 +622,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-045",
@@ -592,6 +636,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
   ],
   thursday: [
@@ -607,6 +652,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-047",
@@ -620,6 +666,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-048",
@@ -633,6 +680,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-049",
@@ -646,6 +694,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-050",
@@ -659,6 +708,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-051",
@@ -672,6 +722,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-052",
@@ -685,6 +736,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-053",
@@ -698,6 +750,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-054",
@@ -711,6 +764,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-055",
@@ -724,6 +778,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-056",
@@ -737,6 +792,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-057",
@@ -750,6 +806,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-058",
@@ -763,6 +820,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-059",
@@ -776,6 +834,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-060",
@@ -789,6 +848,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-061",
@@ -802,6 +862,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-062",
@@ -815,6 +876,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-063",
@@ -828,6 +890,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-064",
@@ -841,6 +904,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-065",
@@ -854,6 +918,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-066",
@@ -867,6 +932,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-067",
@@ -880,6 +946,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-068",
@@ -893,6 +960,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-069",
@@ -906,6 +974,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
   ],
   friday: [
@@ -921,6 +990,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-071",
@@ -934,6 +1004,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-072",
@@ -947,6 +1018,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-073",
@@ -960,6 +1032,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-074",
@@ -973,6 +1046,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-075",
@@ -986,6 +1060,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-076",
@@ -999,6 +1074,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-077",
@@ -1012,6 +1088,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-078",
@@ -1025,6 +1102,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-079",
@@ -1038,6 +1116,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-080",
@@ -1051,6 +1130,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-081",
@@ -1064,6 +1144,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-082",
@@ -1077,6 +1158,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-083",
@@ -1090,6 +1172,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-084",
@@ -1103,6 +1186,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-085",
@@ -1116,6 +1200,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-086",
@@ -1129,6 +1214,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-087",
@@ -1142,6 +1228,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-088",
@@ -1155,6 +1242,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-089",
@@ -1168,6 +1256,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-090",
@@ -1181,6 +1270,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-091",
@@ -1194,6 +1284,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-092",
@@ -1207,6 +1298,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-093",
@@ -1220,6 +1312,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-094",
@@ -1233,6 +1326,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
   ],
   saturday: [
@@ -1248,6 +1342,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-096",
@@ -1261,6 +1356,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-097",
@@ -1274,6 +1370,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-098",
@@ -1287,19 +1384,21 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-099",
-      name: "Feria Cordón",
+      name: "Feria Calle Salto",
       location: "Salto, desde Soriano hasta San Salvador",
       neighborhood: "cordon",
-      lat: -34.9037,
-      lng: -56.1869,
-      beginningTime: "08:00",
-      endTime: "14:00",
-      imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
+      lat: -34.908,
+      lng: -56.182,
+      beginningTime: "07:00",
+      endTime: "15:00",
+      imageUrl: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrh1pp_L8_82G1hGCnSyS57YGHXVfaiCG1JMlZvaIGewF44LybLYs9sjbEMKTbPyaQmcCTWipGXMB37FXJnQ0UqoQKMRp1Ie_quzhMiwpWFFSkGk-jEgaKiNq2cQNXouINcfoA=w408-h306-k-no",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "https://maps.app.goo.gl/ArZaRQmgsQkk3v7WA",
     },
     {
       id: "market-100",
@@ -1313,6 +1412,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-101",
@@ -1326,6 +1426,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-102",
@@ -1339,6 +1440,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-103",
@@ -1352,6 +1454,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-104",
@@ -1365,6 +1468,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-105",
@@ -1378,6 +1482,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-106",
@@ -1391,6 +1496,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-107",
@@ -1404,6 +1510,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-108",
@@ -1417,6 +1524,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-109",
@@ -1430,6 +1538,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-110",
@@ -1443,6 +1552,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-111",
@@ -1456,6 +1566,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-112",
@@ -1469,6 +1580,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-113",
@@ -1482,6 +1594,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-114",
@@ -1495,6 +1608,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-115",
@@ -1508,6 +1622,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-116",
@@ -1521,6 +1636,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-117",
@@ -1534,6 +1650,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-118",
@@ -1547,6 +1664,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-119",
@@ -1560,6 +1678,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-120",
@@ -1573,6 +1692,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-121",
@@ -1586,6 +1706,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-122",
@@ -1599,6 +1720,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
   ],
   sunday: [
@@ -1614,6 +1736,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-124",
@@ -1627,6 +1750,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-125",
@@ -1640,6 +1764,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-126",
@@ -1653,6 +1778,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-127",
@@ -1666,23 +1792,25 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-128",
-      name: "Feria Barrio Sur",
+      name: "Feria Zelmar Michelini",
       location: "Héctor Gutiérrez Ruiz entre Canelones y Maldonado",
       neighborhood: "barrio-sur",
-      lat: -34.9011,
-      lng: -56.1881,
+      lat: -34.9092479,
+      lng: -56.1931342,
       beginningTime: "08:00",
       endTime: "14:00",
-      imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
+      imageUrl: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq-b9vRRy-yuslWlFEcmm1jdVNUOPhPH6u7R8bSnex7REsGqiUpqxyCFhsHS7Z-sTa2I3wfvY2w26ptXVXNDyIoj2NCt1k3xcQ-asv08KfEisfEn_6oAPmmXylAXvzz221eC88b=w408-h306-k-no",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "https://maps.app.goo.gl/G5XBaUf87iwS2Ufs8",
     },
     {
       id: "market-129",
-      name: "Feria Cordón",
+      name: "Feria Tristán Narvaja",
       location: "Tristán Narvaja y Av. 18 de Julio",
       neighborhood: "cordon",
       lat: -34.9023791,
@@ -1692,6 +1820,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/a4/d8/8a/feria-de-tristan-narvaja.jpg?w=1400&h=-1&s=1",
       instagramUrl: "https://www.instagram.com/tristanbaraja",
       tripAdvisorUrl: "https://www.tripadvisor.es/Attraction_Review-g294323-d315425-Reviews-Feria_de_Tristan_Narvaja-Montevideo_Montevideo_Department.html",
+      googleMapURL: "https://maps.app.goo.gl/cWXugmFH6wcVejGZ8",
     },
     {
       id: "market-130",
@@ -1705,6 +1834,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-131",
@@ -1718,6 +1848,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-132",
@@ -1731,6 +1862,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-133",
@@ -1744,6 +1876,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-134",
@@ -1757,6 +1890,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-135",
@@ -1770,6 +1904,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-136",
@@ -1783,6 +1918,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-137",
@@ -1796,6 +1932,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/ed/fe/64/20180512-132709-largejpg.jpg?w=1000&h=-1&s=1",
       instagramUrl: "https://www.instagram.com/feriasmvd",
       tripAdvisorUrl: "https://www.tripadvisor.es/Attraction_Review-g294323-d8614596-Reviews-Feria_de_Villa_Biarritz-Montevideo_Montevideo_Department.html",
+      googleMapURL: "https://www.google.com/maps/place/Plaza+Zorrilla+de+San+Martín,+Montevideo,+Uruguay/@-34.9196276,-56.1559467,17z",
     },
     {
       id: "market-138",
@@ -1809,6 +1946,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-139",
@@ -1822,6 +1960,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-140",
@@ -1835,6 +1974,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-141",
@@ -1848,6 +1988,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-142",
@@ -1861,6 +2002,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-143",
@@ -1874,6 +2016,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-144",
@@ -1887,6 +2030,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-145",
@@ -1900,6 +2044,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-146",
@@ -1913,6 +2058,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-147",
@@ -1926,6 +2072,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-148",
@@ -1939,6 +2086,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-149",
@@ -1952,6 +2100,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-150",
@@ -1965,6 +2114,7 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
     {
       id: "market-151",
@@ -1978,7 +2128,9 @@ export const markets: MarketsData = {
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/53/c7/50/20190428-111712-largejpg.jpg?w=1200&h=-1&s=1",
       instagramUrl: "",
       tripAdvisorUrl: "",
+      googleMapURL: "",
     },
+    
   ],
 };
 

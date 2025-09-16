@@ -12,6 +12,7 @@ export interface Market {
   imageUrl?: string; // Optional - URL to market image
   instagramUrl?: string; // Optional - Instagram profile URL
   tripAdvisorUrl?: string; // Optional - TripAdvisor page URL
+  googleMapURL?: string; // Optional - Direct link to Google Maps location
 }
 
 export interface MarketsData {
