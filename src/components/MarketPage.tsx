@@ -10,7 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Calendar, Navigation } from "lucide-react";
+import { MapPin, Calendar, Navigation, Instagram, ExternalLink } from "lucide-react";
 
 interface MarketPageProps {
   market: Market;
@@ -77,6 +77,21 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
             </CardHeader>
             
             <CardContent className="space-y-6">
+              {/* Market Image */}
+              {market.imageUrl && (
+                <div className="w-full">
+                  <img
+                    src={market.imageUrl}
+                    alt={`Imagen de ${market.name}`}
+                    className="w-full h-64 object-cover rounded-lg"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
+                  />
+                </div>
+              )}
+              
               {/* Location Details */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
@@ -169,6 +184,37 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
                       Los horarios pueden variar según las condiciones climáticas y eventos especiales.
                     </p>
                   </div>
+                  
+                  {/* Social Media Links */}
+                  {(market.instagramUrl || market.tripAdvisorUrl) && (
+                    <div className="space-y-3">
+                      <h3 className="font-semibold text-foreground">Enlaces útiles</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {market.instagramUrl && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="flex items-center gap-2"
+                            onClick={() => window.open(market.instagramUrl, '_blank')}
+                          >
+                            <Instagram className="h-4 w-4" />
+                            Instagram
+                          </Button>
+                        )}
+                        {market.tripAdvisorUrl && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="flex items-center gap-2"
+                            onClick={() => window.open(market.tripAdvisorUrl, '_blank')}
+                          >
+                            <ExternalLink className="h-4 w-4" />
+                            TripAdvisor
+                          </Button>
+                        )}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </CardContent>

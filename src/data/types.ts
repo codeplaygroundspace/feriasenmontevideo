@@ -9,6 +9,9 @@ export interface Market {
   endTime: string; // Market closing time (e.g., "14:00")
   day?: string;
   distance?: number; // Distance from user's location in kilometers
+  imageUrl?: string; // Optional - URL to market image
+  instagramUrl?: string; // Optional - Instagram profile URL
+  tripAdvisorUrl?: string; // Optional - TripAdvisor page URL
 }
 
 export interface MarketsData {
