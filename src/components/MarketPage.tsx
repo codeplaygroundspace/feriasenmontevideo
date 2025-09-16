@@ -50,20 +50,46 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
     <>
           {/* Main Market Information */}
           <Card className="mb-8">
-            <CardHeader className="pb-4">
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                <div className="flex-1">
-                  <CardTitle className="text-2xl sm:text-3xl leading-tight mb-2">
+            <CardHeader className="pb-6">
+              {/* Market Title and Day - Desktop Layout */}
+              <div className="hidden md:flex md:items-start md:justify-between md:gap-4 mb-4">
+                <div className="flex items-center gap-3">
+                  <CardTitle className="text-2xl sm:text-3xl leading-tight">
                     {market.name}
                   </CardTitle>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-2">
                   {day && (
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDayCardColor(day)}`}>
-                      <Calendar className="h-4 w-4 inline mr-1" />
+                    <span className={`px-2 py-1 rounded-md text-xs font-medium ${getDayCardColor(day)} opacity-75`}>
                       {getDayName(day)}
                     </span>
                   )}
+                </div>
+                
+                {/* Action Button - Desktop (Right Side) */}
+                <Button
+                  onClick={handleDirectionsClick}
+                  className="flex items-center gap-2 flex-shrink-0"
+                  size="sm"
+                >
+                  <Navigation className="h-4 w-4" />
+                  Cómo llegar
+                </Button>
+              </div>
+
+              {/* Market Title and Day - Mobile Layout */}
+              <div className="md:hidden mb-4">
+                <div className="flex items-center gap-3 mb-4">
+                  <CardTitle className="text-2xl sm:text-3xl leading-tight">
+                    {market.name}
+                  </CardTitle>
+                  {day && (
+                    <span className={`px-2 py-1 rounded-md text-xs font-medium ${getDayCardColor(day)} opacity-75`}>
+                      {getDayName(day)}
+                    </span>
+                  )}
+                </div>
+                
+                {/* Action Button - Mobile (Below) */}
+                <div className="flex justify-start">
                   <Button
                     onClick={handleDirectionsClick}
                     className="flex items-center gap-2"
@@ -76,14 +102,14 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
               </div>
             </CardHeader>
             
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-8">
               {/* Market Image */}
               {market.imageUrl && (
                 <div className="w-full">
                   <img
                     src={market.imageUrl}
                     alt={`Imagen de ${market.name}`}
-                    className="w-full h-64 object-cover rounded-lg"
+                    className="w-full h-72 object-cover rounded-xl shadow-sm"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
@@ -92,19 +118,13 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
                 </div>
               )}
               
-              {/* Location Details */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Ubicación</h3>
-                      <p className="text-muted-foreground">{market.location}</p>
-                    </div>
-                  </div>
+              {/* Essential Information Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
+                {/* Neighborhood */}
+                <div className="bg-muted/30 rounded-lg p-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0">
+                    <div className="w-5 h-5 text-primary mt-0.5 flex-shrink-0">
                       <svg 
                         className="w-5 h-5" 
                         fill="none" 
@@ -121,14 +141,28 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Barrio</h3>
-                      <p className="text-muted-foreground capitalize">
+                      <p className="text-muted-foreground text-sm capitalize">
                         {market.neighborhood.replace(/-/g, " ")}
                       </p>
                     </div>
                   </div>
-
+                </div>
+                
+                {/* Location */}
+                <div className="bg-muted/30 rounded-lg p-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Ubicación</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{market.location}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Hours */}
+                <div className="bg-muted/30 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 text-primary mt-0.5 flex-shrink-0">
                       <svg 
                         className="w-5 h-5" 
                         fill="none" 
@@ -145,77 +179,60 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Horario</h3>
-                      <p className="text-muted-foreground">
+                      <p className="text-muted-foreground text-sm font-mono">
                         {market.beginningTime} - {market.endTime}
                       </p>
+                      {market.distance && (
+                        <p className="text-xs text-muted-foreground mt-1">
+                          A {formatDistance(market.distance)} de tu ubicación
+                        </p>
+                      )}
                     </div>
                   </div>
-
-                  {market.distance && (
-                    <div className="flex items-start gap-3">
-                      <div className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0">
-                        <svg 
-                          className="w-5 h-5" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          viewBox="0 0 24 24"
-                        >
-                          <path 
-                            strokeLinecap="round" 
-                            strokeLinejoin="round" 
-                            strokeWidth={2} 
-                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" 
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-1">Distancia</h3>
-                        <p className="text-muted-foreground">{formatDistance(market.distance)}</p>
-                      </div>
-                    </div>
-                  )}
                 </div>
 
-                <div className="space-y-4">
-                  <div className="bg-muted/50 rounded-lg p-4">
-                    <h3 className="font-semibold text-foreground mb-2">Información del Mercado</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Este es un mercado callejero tradicional de Montevideo. 
-                      Los horarios pueden variar según las condiciones climáticas y eventos especiales.
-                    </p>
+                
+
+              </div>
+              
+              {/* Market Description and Social Links */}
+              <div className="space-y-6">
+                {/* Market Description */}
+                <div>
+                  <h3 className="font-semibold text-foreground mb-3 text-lg">Sobre este mercado</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Este es un mercado callejero tradicional de Montevideo. 
+                    Los horarios pueden variar según las condiciones climáticas y eventos especiales.
+                  </p>
+                </div>
+                
+                {/* Social Media Links */}
+                {(market.instagramUrl || market.tripAdvisorUrl) && (
+                  <div className="flex flex-wrap gap-3">
+                    {market.instagramUrl && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex items-center gap-2"
+                        onClick={() => window.open(market.instagramUrl, '_blank')}
+                      >
+                        <Instagram className="h-4 w-4" />
+                        Ver en Instagram
+                      </Button>
+                    )}
+                    {market.tripAdvisorUrl && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex items-center gap-2"
+                        onClick={() => window.open(market.tripAdvisorUrl, '_blank')}
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        Ver en TripAdvisor
+                      </Button>
+                    )}
                   </div>
-                  
-                  {/* Social Media Links */}
-                  {(market.instagramUrl || market.tripAdvisorUrl) && (
-                    <div className="space-y-3">
-                      <h3 className="font-semibold text-foreground">Enlaces útiles</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {market.instagramUrl && (
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="flex items-center gap-2"
-                            onClick={() => window.open(market.instagramUrl, '_blank')}
-                          >
-                            <Instagram className="h-4 w-4" />
-                            Instagram
-                          </Button>
-                        )}
-                        {market.tripAdvisorUrl && (
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="flex items-center gap-2"
-                            onClick={() => window.open(market.tripAdvisorUrl, '_blank')}
-                          >
-                            <ExternalLink className="h-4 w-4" />
-                            TripAdvisor
-                          </Button>
-                        )}
-                      </div>
-                    </div>
-                  )}
-                </div>
+                )}
               </div>
             </CardContent>
           </Card>
