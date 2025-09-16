@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { markets } from "@/data";
 import { dayNames } from "@/data/days";
-import MarketsCardGrid from "@/components/MarketsCardGrid";
+import MarketCard from "@/components/MarketCard";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Metadata } from "next";
 
@@ -95,32 +94,24 @@ export default async function NeighborhoodPage({ params }: NeighborhoodPageProps
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {daysWithMarkets.map(day => {
-          const dayMarkets = markets[day as keyof typeof markets]?.filter(market => market.neighborhood === neighborhood) || [];
+        {neighborhoodMarkets.map((market, index) => {
+          // Find which day this market belongs to
+          const marketDay = Object.keys(markets).find(day => 
+            markets[day as keyof typeof markets]?.some(m => m.id === market.id)
+          ) || 'tuesday';
+          
+          // Create market object with day property
+          const marketWithDay = {
+            ...market,
+            day: marketDay
+          };
+          
           return (
-            <div key={day} className="space-y-4">
-              <h2 className="text-xl font-semibold">{dayNames[day as keyof typeof dayNames]}</h2>
-              <div className="space-y-3">
-                {dayMarkets.map(market => (
-                  <Link
-                    key={market.id}
-                    href={`/feria/${market.id}`}
-                    className="block"
-                  >
-                    <div className="border rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer">
-                      <h3 className="font-medium mb-2">{market.name}</h3>
-                      <p className="text-sm text-muted-foreground mb-2">{market.location}</p>
-                      <p className="text-sm font-mono text-muted-foreground">
-                        {market.beginningTime} - {market.endTime}
-                      </p>
-                      <span className="text-primary text-sm hover:underline">
-                        Ver detalles →
-                      </span>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <MarketCard 
+              key={`${market.name}-${market.location}-${index}`} 
+              market={marketWithDay} 
+              day={marketDay} 
+            />
           );
         })}
       </div>
