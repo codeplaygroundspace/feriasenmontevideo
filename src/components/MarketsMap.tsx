@@ -135,7 +135,7 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'tuesday', select
   return (
     <div className="w-full h-full">
       {/* Map */}
-      <div className="h-full w-full">
+      <div className="h-full w-full relative z-0">
         <MapContainer
           center={[-34.9011, -56.1645]} // Montevideo center
           zoom={12}
