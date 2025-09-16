@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SidebarTrigger, SidebarInset } from "@/components/ui/sidebar";
+import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar";
 import {
   Sidebar,
   SidebarContent,
@@ -76,7 +76,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <SidebarProvider>
       {/* Main shadcn/ui Sidebar with all functionality */}
       <Sidebar>
         <SidebarHeader>
@@ -227,6 +227,6 @@ export default function Home() {
           </div>
         </div>
       </SidebarInset>
-    </>
+    </SidebarProvider>
   );
 }
