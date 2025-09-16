@@ -200,7 +200,7 @@ export default function Home() {
 
       {/* Main Content Area with Map/Grid */}
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
+        <header className="sticky top-0 z-50 flex h-16 shrink-0 items-center gap-2 border-b bg-background px-4 backdrop-blur supports-[backdrop-filter]:bg-background/95">
           <SidebarTrigger className="-ml-1" />
           <div className="h-4 w-px bg-sidebar-border" />
           <h1 className="text-lg font-semibold">Ferias de Montevideo</h1>
