@@ -16,8 +16,9 @@ import {
   SidebarMenuItem,
   SidebarSeparator,
 } from "@/components/ui/sidebar";
-import { Switch } from "@/components/ui/switch";
-import { MapPin, Calendar, Map, List, MessageSquare, Info } from "lucide-react";
+import ViewToggle from "@/components/ViewToggle";
+import DayFilters from "@/components/DayFilters";
+import { MapPin, MessageSquare, Info } from "lucide-react";
 import NeighborhoodDropdown from "@/components/NeighborhoodDropdown";
 import AddressInput from "@/components/AddressInput";
 import DynamicMarketsMap from "@/components/DynamicMarketsMap";
@@ -37,9 +38,9 @@ export default function Home() {
   // Use the markets hook
   const { hasMarketsForDay, hasMarketsForDayInNeighborhood } = useMarkets();
 
-  const handleDayChange = (day: string, markets: Market[]) => {
+  const handleDayChange = (day: string) => {
     setSelectedDay(day);
-    console.log(`Selected day: ${day}`, markets);
+    console.log(`Selected day: ${day}`);
   };
 
   const handleNeighborhoodChange = (neighborhood: string) => {
@@ -91,21 +92,11 @@ export default function Home() {
           <SidebarGroup>
             <SidebarGroupLabel>Vista</SidebarGroupLabel>
             <SidebarGroupContent>
-              <div className="flex items-center justify-between px-2 py-2">
-                <div className="flex items-center gap-2">
-                  <Map className="h-4 w-4" />
-                  <span className="text-sm">Mapa</span>
-                </div>
-                <Switch
-                  checked={currentView === "cards"}
-                  onCheckedChange={(checked) => handleViewChange(checked ? "cards" : "map")}
-                  size="sm"
-                />
-                <div className="flex items-center gap-2">
-                  <List className="h-4 w-4" />
-                  <span className="text-sm">Lista</span>
-                </div>
-              </div>
+              <ViewToggle 
+                currentView={currentView}
+                onViewChange={handleViewChange}
+                fullWidth={true}
+              />
             </SidebarGroupContent>
           </SidebarGroup>
 
@@ -153,45 +144,12 @@ export default function Home() {
               <span className="text-xs text-muted-foreground font-normal">(selecciona)</span>
             </SidebarGroupLabel>
             <SidebarGroupContent>
-              <SidebarMenu className="space-y-2">
-                {Object.keys(dayNames).map((day) => {
-                  const hasMarkets = hasMarketsForDayInNeighborhood(day, selectedNeighborhood);
-                  const isActive = selectedDay === day;
-                  return (
-                    <SidebarMenuItem key={day}>
-                      <SidebarMenuButton
-                        onClick={() => hasMarkets && handleDayChange(day, [])}
-                        isActive={isActive}
-                        disabled={!hasMarkets}
-                        className={`
-                          w-full justify-start 
-                          border border-gray-200 
-                          rounded-lg 
-                          transition-all duration-200
-                          min-h-[44px]
-                          px-3 py-2
-                          ${isActive 
-                            ? 'bg-blue-50 border-blue-300 text-blue-700 shadow-sm ring-1 ring-blue-200' 
-                            : hasMarkets 
-                              ? 'bg-white hover:bg-gray-50 hover:border-gray-300 hover:shadow-sm active:bg-gray-100 active:scale-[0.98]' 
-                              : 'opacity-50 cursor-not-allowed bg-gray-50'
-                          }
-                          ${hasMarkets ? 'cursor-pointer' : 'cursor-not-allowed'}
-                        `}
-                      >
-                        <Calendar className={`h-4 w-4 ${isActive ? 'text-blue-600' : 'text-gray-500'}`} />
-                        <span className="font-medium">{dayNames[day as keyof typeof dayNames]}</span>
-                        {!hasMarkets && day !== 'all' && (
-                          <span className="ml-auto text-xs text-muted-foreground">Sin ferias</span>
-                        )}
-                        {isActive && (
-                          <div className="ml-auto w-2 h-2 bg-blue-600 rounded-full"></div>
-                        )}
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  );
-                })}
-              </SidebarMenu>
+              <DayFilters
+                selectedDay={selectedDay}
+                selectedNeighborhood={selectedNeighborhood}
+                onDayChange={handleDayChange}
+                hasMarketsForDayInNeighborhood={hasMarketsForDayInNeighborhood}
+              />
             </SidebarGroupContent>
           </SidebarGroup>
 

@@ -5,10 +5,10 @@ import { markets } from "@/data";
 import { dayNames, dayColors, type Market } from "@/data";
 import NeighborhoodDropdown from "./NeighborhoodDropdown";
 import AddressInput from "./AddressInput";
-import { Switch } from "@/components/ui/switch";
+import ViewToggle from "./ViewToggle";
 import type { Coordinates } from "@/hooks/useAddressGeocoding";
 
-interface MarketsSectionProps {
+interface MarketFiltersProps {
   onDayChange?: (day: string, markets: Market[]) => void;
   onNeighborhoodChange?: (neighborhood: string) => void;
   onAddressChange?: (address: string, coordinates: Coordinates) => void;
@@ -18,7 +18,7 @@ interface MarketsSectionProps {
   currentView?: "map" | "cards";
 }
 
-const MarketsSection: React.FC<MarketsSectionProps> = ({ 
+const MarketFilters: React.FC<MarketFiltersProps> = ({ 
   onDayChange, 
   onNeighborhoodChange, 
   onAddressChange, 
@@ -42,9 +42,8 @@ const MarketsSection: React.FC<MarketsSectionProps> = ({
     onNeighborhoodChange?.(neighborhood);
   };
 
-  const handleViewToggle = (checked: boolean) => {
-    const newView = checked ? "cards" : "map";
-    onViewChange?.(newView);
+  const handleViewChange = (view: "map" | "cards") => {
+    onViewChange?.(view);
   };
 
   return (
@@ -53,21 +52,10 @@ const MarketsSection: React.FC<MarketsSectionProps> = ({
         {/* View Toggle */}
         <div>
           <h3 className="text-lg font-semibold text-gray-800 mb-3">Vista</h3>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <span className={`text-sm font-medium ${currentView === "map" ? "text-gray-900" : "text-gray-500"}`}>
-                Mapa
-              </span>
-              <Switch
-                checked={currentView === "cards"}
-                onCheckedChange={handleViewToggle}
-                size="md"
-              />
-              <span className={`text-sm font-medium ${currentView === "cards" ? "text-gray-900" : "text-gray-500"}`}>
-                Lista
-              </span>
-            </div>
-          </div>
+          <ViewToggle 
+            currentView={currentView}
+            onViewChange={handleViewChange}
+          />
         </div>
         {/* Address Input */}
         <AddressInput
@@ -109,4 +97,4 @@ const MarketsSection: React.FC<MarketsSectionProps> = ({
   );
 };
 
-export default MarketsSection;
+export default MarketFilters;
