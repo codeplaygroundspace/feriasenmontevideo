@@ -32,7 +32,7 @@ export default function MarketLayout({
                 Volver
               </Button>
               <div className="h-6 w-px bg-border" />
-              <h1 className="text-lg font-semibold">Detalles del Mercado</h1>
+              <h1 className="text-lg font-semibold">Detalles de la feria</h1>
             </div>
           </div>
         </div>

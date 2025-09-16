@@ -205,8 +205,8 @@ export default function Home() {
         </header>
 
         {/* Main Content with Rounded Borders */}
-        <div className="flex-1 p-6">
-          <div className="h-full bg-card rounded-xl border border-border shadow-sm overflow-hidden">
+        <div className="flex-4">
+          <div className="h-full bg-card rounded-xl overflow-hidden">
             {currentView === "map" ? (
               <DynamicMarketsMap 
                 selectedDay={selectedDay} 
