@@ -5,6 +5,8 @@ export interface Market {
   neighborhood: string;
   lat: number;
   lng: number;
+  beginningTime: string; // Market opening time (e.g., "08:00")
+  endTime: string; // Market closing time (e.g., "14:00")
   day?: string;
   distance?: number; // Distance from user's location in kilometers
 }

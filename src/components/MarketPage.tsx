@@ -56,10 +56,6 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
                   <CardTitle className="text-2xl sm:text-3xl leading-tight mb-2">
                     {market.name}
                   </CardTitle>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <MapPin className="h-4 w-4" />
-                    <span className="text-sm">{market.location}</span>
-                  </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-2">
                   {day && (
@@ -116,6 +112,30 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
                     </div>
                   </div>
 
+                  <div className="flex items-start gap-3">
+                    <div className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0">
+                      <svg 
+                        className="w-5 h-5" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeWidth={2} 
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" 
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Horario</h3>
+                      <p className="text-muted-foreground">
+                        {market.beginningTime} - {market.endTime}
+                      </p>
+                    </div>
+                  </div>
+
                   {market.distance && (
                     <div className="flex items-start gap-3">
                       <div className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0">
@@ -157,7 +177,7 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
           {/* Related Markets */}
           {relatedMarkets && relatedMarkets.length > 0 && (
             <div className="mb-8">
-              <h2 className="text-xl font-semibold mb-4">Mercados Relacionados</h2>
+              <h2 className="text-xl font-semibold mb-4">Otras ferias</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {relatedMarkets.map((relatedMarket) => (
                   <Link
@@ -176,6 +196,24 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
                           <MapPin className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
                           <p className="text-sm text-muted-foreground">
                             {relatedMarket.location}
+                          </p>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <svg 
+                            className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                          >
+                            <path 
+                              strokeLinecap="round" 
+                              strokeLinejoin="round" 
+                              strokeWidth={2} 
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" 
+                            />
+                          </svg>
+                          <p className="text-sm text-muted-foreground">
+                            {relatedMarket.beginningTime} - {relatedMarket.endTime}
                           </p>
                         </div>
                         <p className="text-xs text-muted-foreground capitalize">
