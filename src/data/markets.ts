@@ -11,8 +11,10 @@ export const markets: MarketsData = {
       name: "Feria Belvedere",
       location: "Villavicencio y Santa Lucía",
       neighborhood: "belvedere",
-      lat: -34.9176,
-      lng: -56.1528,
+      lat: -34.8498386,
+      lng: -56.229233,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-002",
@@ -21,6 +23,8 @@ export const markets: MarketsData = {
       neighborhood: "cerro-paso-arena",
       lat: -34.8889,
       lng: -56.0444,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-003",
@@ -29,6 +33,8 @@ export const markets: MarketsData = {
       neighborhood: "barrio-sur",
       lat: -34.9011,
       lng: -56.1881,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-004",
@@ -37,6 +43,8 @@ export const markets: MarketsData = {
       neighborhood: "ciudad-vieja",
       lat: -34.9059,
       lng: -56.2081,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-005",
@@ -45,6 +53,8 @@ export const markets: MarketsData = {
       neighborhood: "palermo",
       lat: -34.9037,
       lng: -56.1869,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-006",
@@ -53,6 +63,8 @@ export const markets: MarketsData = {
       neighborhood: "parque-rodo",
       lat: -34.9089,
       lng: -56.1631,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-007",
@@ -61,6 +73,8 @@ export const markets: MarketsData = {
       neighborhood: "prado-nueva-savona",
       lat: -34.8833,
       lng: -56.1833,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-008",
@@ -69,6 +83,8 @@ export const markets: MarketsData = {
       neighborhood: "tres-cruces",
       lat: -34.8847,
       lng: -56.1558,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-009",
@@ -77,6 +93,8 @@ export const markets: MarketsData = {
       neighborhood: "la-blanqueada",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-010",
@@ -85,6 +103,8 @@ export const markets: MarketsData = {
       neighborhood: "cerrito",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-011",
@@ -93,6 +113,8 @@ export const markets: MarketsData = {
       neighborhood: "la-blanqueada",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-012",
@@ -101,6 +123,8 @@ export const markets: MarketsData = {
       neighborhood: "malvin-norte",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-013",
@@ -109,6 +133,8 @@ export const markets: MarketsData = {
       neighborhood: "union",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-014",
@@ -117,6 +143,8 @@ export const markets: MarketsData = {
       neighborhood: "malvin",
       lat: -34.9000,
       lng: -56.1000,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-015",
@@ -125,6 +153,8 @@ export const markets: MarketsData = {
       neighborhood: "jardines-del-hipodromo",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-016",
@@ -133,6 +163,8 @@ export const markets: MarketsData = {
       neighborhood: "manga",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-017",
@@ -141,6 +173,8 @@ export const markets: MarketsData = {
       neighborhood: "lezica-melilla",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-018",
@@ -149,6 +183,8 @@ export const markets: MarketsData = {
       neighborhood: "penarol-lavalleja",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-019",
@@ -157,6 +193,8 @@ export const markets: MarketsData = {
       neighborhood: "sayago",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
   ],
   wednesday: [
@@ -165,8 +203,10 @@ export const markets: MarketsData = {
       name: "Feria Belvedere",
       location: "Emilio Romero, desde India Muerta hasta Vicente Basagoity",
       neighborhood: "belvedere",
-      lat: -34.9176,
-      lng: -56.1528,
+      lat: -34.8498386,
+      lng: -56.229233,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-021",
@@ -175,6 +215,8 @@ export const markets: MarketsData = {
       neighborhood: "nuevo-paris",
       lat: -34.8847,
       lng: -56.1558,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-022",
@@ -183,6 +225,8 @@ export const markets: MarketsData = {
       neighborhood: "la-paloma-tomkinson",
       lat: -34.9097,
       lng: -56.1319,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-023",
@@ -191,6 +235,8 @@ export const markets: MarketsData = {
       neighborhood: "parque-rodo",
       lat: -34.9089,
       lng: -56.1631,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-024",
@@ -199,6 +245,8 @@ export const markets: MarketsData = {
       neighborhood: "brazo-oriental",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-025",
@@ -207,6 +255,8 @@ export const markets: MarketsData = {
       neighborhood: "brazo-oriental",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-026",
@@ -215,6 +265,8 @@ export const markets: MarketsData = {
       neighborhood: "capurro-bella-vista",
       lat: -34.8833,
       lng: -56.2000,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-027",
@@ -223,6 +275,8 @@ export const markets: MarketsData = {
       neighborhood: "prado-nueva-savona",
       lat: -34.8833,
       lng: -56.1833,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-028",
@@ -231,6 +285,8 @@ export const markets: MarketsData = {
       neighborhood: "reducto",
       lat: -34.9000,
       lng: -56.1667,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-029",
@@ -239,6 +295,8 @@ export const markets: MarketsData = {
       neighborhood: "buceo",
       lat: -34.9000,
       lng: -56.1333,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-030",
@@ -247,6 +305,8 @@ export const markets: MarketsData = {
       neighborhood: "parque-batlle-villa-dolores",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-031",
@@ -255,6 +315,8 @@ export const markets: MarketsData = {
       neighborhood: "pocitos",
       lat: -34.9000,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-032",
@@ -263,6 +325,8 @@ export const markets: MarketsData = {
       neighborhood: "pocitos",
       lat: -34.9000,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-033",
@@ -271,6 +335,8 @@ export const markets: MarketsData = {
       neighborhood: "manga",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-034",
@@ -279,6 +345,8 @@ export const markets: MarketsData = {
       neighborhood: "manga-toledo-chico",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-035",
@@ -287,6 +355,8 @@ export const markets: MarketsData = {
       neighborhood: "piedras-blancas",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-036",
@@ -295,6 +365,8 @@ export const markets: MarketsData = {
       neighborhood: "villa-espanola",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-037",
@@ -303,6 +375,8 @@ export const markets: MarketsData = {
       neighborhood: "malvin-norte",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-038",
@@ -311,6 +385,8 @@ export const markets: MarketsData = {
       neighborhood: "union",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-039",
@@ -319,6 +395,8 @@ export const markets: MarketsData = {
       neighborhood: "malvin",
       lat: -34.9000,
       lng: -56.1000,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-040",
@@ -327,6 +405,8 @@ export const markets: MarketsData = {
       neighborhood: "carrasco",
       lat: -34.8833,
       lng: -56.0833,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-041",
@@ -335,6 +415,8 @@ export const markets: MarketsData = {
       neighborhood: "carrasco-norte",
       lat: -34.8833,
       lng: -56.0833,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-042",
@@ -343,6 +425,8 @@ export const markets: MarketsData = {
       neighborhood: "ituzaingo",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-043",
@@ -351,6 +435,8 @@ export const markets: MarketsData = {
       neighborhood: "colon-sureste-abayuba",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-044",
@@ -359,6 +445,8 @@ export const markets: MarketsData = {
       neighborhood: "barrio-conciliacion",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-045",
@@ -367,6 +455,8 @@ export const markets: MarketsData = {
       neighborhood: "paso-de-las-duranas",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
   ],
   thursday: [
@@ -377,6 +467,8 @@ export const markets: MarketsData = {
       neighborhood: "prado-nueva-savona",
       lat: -34.9037,
       lng: -56.1869,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-047",
@@ -385,6 +477,8 @@ export const markets: MarketsData = {
       neighborhood: "cerro-paso-arena",
       lat: -34.8889,
       lng: -56.0444,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-048",
@@ -393,14 +487,18 @@ export const markets: MarketsData = {
       neighborhood: "la-paloma-tomkinson",
       lat: -34.9097,
       lng: -56.1319,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-049",
       name: "Feria Cordón",
       location: "Carlos Roxlo entre AV. Uruguay Y Paysandú",
       neighborhood: "cordon",
-      lat: -34.9037,
-      lng: -56.1869,
+      lat: -34.9015221,
+      lng: -56.1826952,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-050",
@@ -409,6 +507,8 @@ export const markets: MarketsData = {
       neighborhood: "palermo",
       lat: -34.9037,
       lng: -56.1869,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-051",
@@ -417,6 +517,8 @@ export const markets: MarketsData = {
       neighborhood: "jacinto-vera",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-052",
@@ -425,6 +527,8 @@ export const markets: MarketsData = {
       neighborhood: "la-figurita",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-053",
@@ -433,6 +537,8 @@ export const markets: MarketsData = {
       neighborhood: "villa-munoz-retiro",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-054",
@@ -441,6 +547,8 @@ export const markets: MarketsData = {
       neighborhood: "larranaga",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-055",
@@ -449,6 +557,8 @@ export const markets: MarketsData = {
       neighborhood: "aires-puros",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-056",
@@ -457,6 +567,8 @@ export const markets: MarketsData = {
       neighborhood: "brazo-oriental",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-057",
@@ -465,6 +577,8 @@ export const markets: MarketsData = {
       neighborhood: "capurro-bella-vista",
       lat: -34.8833,
       lng: -56.2000,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-058",
@@ -473,6 +587,8 @@ export const markets: MarketsData = {
       neighborhood: "pocitos",
       lat: -34.9000,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-059",
@@ -481,6 +597,8 @@ export const markets: MarketsData = {
       neighborhood: "pocitos",
       lat: -34.9000,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-060",
@@ -489,6 +607,8 @@ export const markets: MarketsData = {
       neighborhood: "pocitos",
       lat: -34.9000,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-061",
@@ -497,6 +617,8 @@ export const markets: MarketsData = {
       neighborhood: "piedras-blancas",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-062",
@@ -505,6 +627,8 @@ export const markets: MarketsData = {
       neighborhood: "cerrito",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-063",
@@ -513,6 +637,8 @@ export const markets: MarketsData = {
       neighborhood: "castro-castellanos",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-064",
@@ -521,6 +647,8 @@ export const markets: MarketsData = {
       neighborhood: "mercado-modelo-bolivar",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-065",
@@ -529,6 +657,8 @@ export const markets: MarketsData = {
       neighborhood: "malvin",
       lat: -34.9000,
       lng: -56.1000,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-066",
@@ -537,6 +667,8 @@ export const markets: MarketsData = {
       neighborhood: "flor-de-maronas",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-067",
@@ -545,6 +677,8 @@ export const markets: MarketsData = {
       neighborhood: "malvin-norte",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-068",
@@ -553,6 +687,8 @@ export const markets: MarketsData = {
       neighborhood: "colon-centro-noroeste",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-069",
@@ -561,6 +697,8 @@ export const markets: MarketsData = {
       neighborhood: "penarol-lavalleja",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
   ],
   friday: [
@@ -569,8 +707,10 @@ export const markets: MarketsData = {
       name: "Feria Belvedere",
       location: "Vicente Basagoity desde avenida Carlos María Ramírez a A. Vaillant",
       neighborhood: "belvedere",
-      lat: -34.9176,
-      lng: -56.1528,
+      lat: -34.8498386,
+      lng: -56.229233,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-071",
@@ -579,6 +719,8 @@ export const markets: MarketsData = {
       neighborhood: "casabo-pajas-blancas",
       lat: -34.8847,
       lng: -56.1558,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-072",
@@ -587,6 +729,8 @@ export const markets: MarketsData = {
       neighborhood: "la-paloma-tomkinson",
       lat: -34.9097,
       lng: -56.1319,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-073",
@@ -595,6 +739,8 @@ export const markets: MarketsData = {
       neighborhood: "paso-arena",
       lat: -34.8889,
       lng: -56.0444,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-074",
@@ -603,6 +749,8 @@ export const markets: MarketsData = {
       neighborhood: "ciudad-vieja",
       lat: -34.9059,
       lng: -56.2081,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-075",
@@ -611,6 +759,8 @@ export const markets: MarketsData = {
       neighborhood: "cordon",
       lat: -34.9037,
       lng: -56.1869,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-076",
@@ -619,6 +769,8 @@ export const markets: MarketsData = {
       neighborhood: "cordon",
       lat: -34.9037,
       lng: -56.1869,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-077",
@@ -627,6 +779,8 @@ export const markets: MarketsData = {
       neighborhood: "centro",
       lat: -34.9011,
       lng: -56.1881,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-078",
@@ -635,6 +789,8 @@ export const markets: MarketsData = {
       neighborhood: "la-blanqueada",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-079",
@@ -643,6 +799,8 @@ export const markets: MarketsData = {
       neighborhood: "larranaga",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-080",
@@ -651,6 +809,8 @@ export const markets: MarketsData = {
       neighborhood: "parque-batlle-villa-dolores",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-081",
@@ -659,6 +819,8 @@ export const markets: MarketsData = {
       neighborhood: "parque-batlle-villa-dolores",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-082",
@@ -667,6 +829,8 @@ export const markets: MarketsData = {
       neighborhood: "reducto",
       lat: -34.9000,
       lng: -56.1667,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-083",
@@ -675,6 +839,8 @@ export const markets: MarketsData = {
       neighborhood: "prado-nueva-savona",
       lat: -34.8833,
       lng: -56.1833,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-084",
@@ -683,6 +849,8 @@ export const markets: MarketsData = {
       neighborhood: "mercado-modelo-bolivar",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-085",
@@ -691,6 +859,8 @@ export const markets: MarketsData = {
       neighborhood: "pocitos",
       lat: -34.9000,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-086",
@@ -699,6 +869,8 @@ export const markets: MarketsData = {
       neighborhood: "manga-toledo-chico",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-087",
@@ -707,6 +879,8 @@ export const markets: MarketsData = {
       neighborhood: "casavalle",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-088",
@@ -715,6 +889,8 @@ export const markets: MarketsData = {
       neighborhood: "union",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-089",
@@ -723,6 +899,8 @@ export const markets: MarketsData = {
       neighborhood: "malvin",
       lat: -34.9000,
       lng: -56.1000,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-090",
@@ -731,6 +909,8 @@ export const markets: MarketsData = {
       neighborhood: "buceo",
       lat: -34.9000,
       lng: -56.1333,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-091",
@@ -739,6 +919,8 @@ export const markets: MarketsData = {
       neighborhood: "villa-garcia-manga-rural",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-092",
@@ -747,6 +929,8 @@ export const markets: MarketsData = {
       neighborhood: "lezica-melilla",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-093",
@@ -755,6 +939,8 @@ export const markets: MarketsData = {
       neighborhood: "paso-de-las-duranas",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-094",
@@ -763,6 +949,8 @@ export const markets: MarketsData = {
       neighborhood: "sayago",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
   ],
   saturday: [
@@ -773,6 +961,8 @@ export const markets: MarketsData = {
       neighborhood: "la-teja",
       lat: -34.9089,
       lng: -56.1631,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-096",
@@ -781,6 +971,8 @@ export const markets: MarketsData = {
       neighborhood: "cerro-paso-arena",
       lat: -34.8889,
       lng: -56.0444,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-097",
@@ -789,6 +981,8 @@ export const markets: MarketsData = {
       neighborhood: "paso-arena",
       lat: -34.8889,
       lng: -56.0444,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-098",
@@ -797,6 +991,8 @@ export const markets: MarketsData = {
       neighborhood: "aguada",
       lat: -34.8847,
       lng: -56.1558,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-099",
@@ -805,6 +1001,8 @@ export const markets: MarketsData = {
       neighborhood: "cordon",
       lat: -34.9037,
       lng: -56.1869,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-100",
@@ -813,6 +1011,8 @@ export const markets: MarketsData = {
       neighborhood: "cordon",
       lat: -34.9037,
       lng: -56.1869,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-101",
@@ -821,6 +1021,8 @@ export const markets: MarketsData = {
       neighborhood: "la-comercial",
       lat: -34.9011,
       lng: -56.1881,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-102",
@@ -829,6 +1031,8 @@ export const markets: MarketsData = {
       neighborhood: "parque-batlle-villa-dolores",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-103",
@@ -837,6 +1041,8 @@ export const markets: MarketsData = {
       neighborhood: "buceo",
       lat: -34.9000,
       lng: -56.1333,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-104",
@@ -845,6 +1051,8 @@ export const markets: MarketsData = {
       neighborhood: "parque-batlle-villa-dolores",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-105",
@@ -853,6 +1061,8 @@ export const markets: MarketsData = {
       neighborhood: "reducto",
       lat: -34.9000,
       lng: -56.1667,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-106",
@@ -861,6 +1071,8 @@ export const markets: MarketsData = {
       neighborhood: "malvin",
       lat: -34.9000,
       lng: -56.1000,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-107",
@@ -869,6 +1081,8 @@ export const markets: MarketsData = {
       neighborhood: "buceo",
       lat: -34.9000,
       lng: -56.1333,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-108",
@@ -877,6 +1091,8 @@ export const markets: MarketsData = {
       neighborhood: "punta-gorda",
       lat: -34.9000,
       lng: -56.1000,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-109",
@@ -885,6 +1101,8 @@ export const markets: MarketsData = {
       neighborhood: "carrasco",
       lat: -34.8833,
       lng: -56.0833,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-110",
@@ -893,6 +1111,8 @@ export const markets: MarketsData = {
       neighborhood: "flor-de-maronas",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-111",
@@ -901,6 +1121,8 @@ export const markets: MarketsData = {
       neighborhood: "flor-de-maronas",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-112",
@@ -909,6 +1131,8 @@ export const markets: MarketsData = {
       neighborhood: "jardines-del-hipodromo",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-113",
@@ -917,6 +1141,8 @@ export const markets: MarketsData = {
       neighborhood: "malvin-norte",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-114",
@@ -925,6 +1151,8 @@ export const markets: MarketsData = {
       neighborhood: "punta-de-rieles-bella-italia",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-115",
@@ -933,6 +1161,8 @@ export const markets: MarketsData = {
       neighborhood: "villa-garcia-manga-rural",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-116",
@@ -941,6 +1171,8 @@ export const markets: MarketsData = {
       neighborhood: "manga",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-117",
@@ -949,6 +1181,8 @@ export const markets: MarketsData = {
       neighborhood: "piedras-blancas",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-118",
@@ -957,6 +1191,8 @@ export const markets: MarketsData = {
       neighborhood: "colon-centro-noroeste",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-119",
@@ -965,6 +1201,8 @@ export const markets: MarketsData = {
       neighborhood: "lezica-melilla",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-120",
@@ -973,6 +1211,8 @@ export const markets: MarketsData = {
       neighborhood: "paso-de-las-duranas",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-121",
@@ -981,6 +1221,8 @@ export const markets: MarketsData = {
       neighborhood: "paso-de-las-duranas",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-122",
@@ -989,6 +1231,8 @@ export const markets: MarketsData = {
       neighborhood: "barrio-conciliacion",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
   ],
   sunday: [
@@ -999,6 +1243,8 @@ export const markets: MarketsData = {
       neighborhood: "la-teja",
       lat: -34.9089,
       lng: -56.1631,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-124",
@@ -1007,6 +1253,8 @@ export const markets: MarketsData = {
       neighborhood: "nuevo-paris",
       lat: -34.8847,
       lng: -56.1558,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-125",
@@ -1015,6 +1263,8 @@ export const markets: MarketsData = {
       neighborhood: "casabo-pajas-blancas",
       lat: -34.8847,
       lng: -56.1558,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-126",
@@ -1023,6 +1273,8 @@ export const markets: MarketsData = {
       neighborhood: "cerro-paso-arena",
       lat: -34.8889,
       lng: -56.0444,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-127",
@@ -1031,6 +1283,8 @@ export const markets: MarketsData = {
       neighborhood: "la-paloma-tomkinson",
       lat: -34.9097,
       lng: -56.1319,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-128",
@@ -1039,6 +1293,8 @@ export const markets: MarketsData = {
       neighborhood: "barrio-sur",
       lat: -34.9011,
       lng: -56.1881,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-129",
@@ -1047,6 +1303,8 @@ export const markets: MarketsData = {
       neighborhood: "cordon",
       lat: -34.9037,
       lng: -56.1869,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-130",
@@ -1055,6 +1313,8 @@ export const markets: MarketsData = {
       neighborhood: "villa-munoz-retiro",
       lat: -34.8847,
       lng: -56.1558,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-131",
@@ -1063,6 +1323,8 @@ export const markets: MarketsData = {
       neighborhood: "larranaga",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-132",
@@ -1071,6 +1333,8 @@ export const markets: MarketsData = {
       neighborhood: "mercado-modelo-bolivar",
       lat: -34.8833,
       lng: -56.1500,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-133",
@@ -1079,6 +1343,8 @@ export const markets: MarketsData = {
       neighborhood: "capurro-bella-vista",
       lat: -34.8833,
       lng: -56.2000,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-134",
@@ -1087,6 +1353,8 @@ export const markets: MarketsData = {
       neighborhood: "paso-arena",
       lat: -34.8889,
       lng: -56.0444,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-135",
@@ -1095,6 +1363,8 @@ export const markets: MarketsData = {
       neighborhood: "pocitos",
       lat: -34.9000,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-136",
@@ -1103,6 +1373,8 @@ export const markets: MarketsData = {
       neighborhood: "punta-carretas",
       lat: -34.9000,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-137",
@@ -1111,6 +1383,8 @@ export const markets: MarketsData = {
       neighborhood: "villa-biarritz",
       lat: -34.9000,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-138",
@@ -1119,6 +1393,8 @@ export const markets: MarketsData = {
       neighborhood: "villa-biarritz",
       lat: -34.9000,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-139",
@@ -1127,6 +1403,8 @@ export const markets: MarketsData = {
       neighborhood: "manga-toledo-chico",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-140",
@@ -1135,6 +1413,8 @@ export const markets: MarketsData = {
       neighborhood: "piedras-blancas",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-141",
@@ -1143,6 +1423,8 @@ export const markets: MarketsData = {
       neighborhood: "cerrito",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-142",
@@ -1151,6 +1433,8 @@ export const markets: MarketsData = {
       neighborhood: "cerrito",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-143",
@@ -1159,6 +1443,8 @@ export const markets: MarketsData = {
       neighborhood: "union",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-144",
@@ -1167,6 +1453,8 @@ export const markets: MarketsData = {
       neighborhood: "union",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-145",
@@ -1175,6 +1463,8 @@ export const markets: MarketsData = {
       neighborhood: "malvin",
       lat: -34.9000,
       lng: -56.1000,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-146",
@@ -1183,6 +1473,8 @@ export const markets: MarketsData = {
       neighborhood: "carrasco",
       lat: -34.8833,
       lng: -56.0833,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-147",
@@ -1191,6 +1483,8 @@ export const markets: MarketsData = {
       neighborhood: "la-cruz-de-carrasco",
       lat: -34.8833,
       lng: -56.0833,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-148",
@@ -1199,6 +1493,8 @@ export const markets: MarketsData = {
       neighborhood: "punta-de-rieles-bella-italia",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-149",
@@ -1207,6 +1503,8 @@ export const markets: MarketsData = {
       neighborhood: "barrio-conciliacion",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-150",
@@ -1215,6 +1513,8 @@ export const markets: MarketsData = {
       neighborhood: "penarol-lavalleja",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
     {
       id: "market-151",
@@ -1223,6 +1523,8 @@ export const markets: MarketsData = {
       neighborhood: "sayago",
       lat: -34.8833,
       lng: -56.1167,
+      beginningTime: "08:00",
+      endTime: "14:00",
     },
   ],
 };
