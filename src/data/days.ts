@@ -12,7 +12,8 @@ export const DAYS_OF_WEEK = [
 export type DayOfWeek = typeof DAYS_OF_WEEK[number];
 
 // Day names in Spanish
-export const dayNames: Record<DayOfWeek, string> = {
+export const dayNames: Record<DayOfWeek | 'all', string> = {
+  all: "Todos",
   monday: "Lunes",
   tuesday: "Martes",
   wednesday: "Miércoles",
@@ -50,13 +51,15 @@ export const getDayName = (day?: string): string => {
 };
 
 export const getDayColor = (day?: string): string => {
+  if (day === 'all') return "bg-gray-500";
   return dayColors[day as keyof typeof dayColors] || "bg-gray-400";
 };
 
 export const getDayCardColor = (day?: string): string => {
+  if (day === 'all') return "bg-gray-100 text-gray-800";
   return dayCardColors[day as keyof typeof dayCardColors] || "bg-gray-100 text-gray-800";
 };
 
-export const isValidDay = (day: string): day is DayOfWeek => {
-  return DAYS_OF_WEEK.includes(day as DayOfWeek);
+export const isValidDay = (day: string): day is DayOfWeek | 'all' => {
+  return day === 'all' || DAYS_OF_WEEK.includes(day as DayOfWeek);
 };

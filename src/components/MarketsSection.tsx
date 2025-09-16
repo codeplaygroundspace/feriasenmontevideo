@@ -27,7 +27,7 @@ const MarketsSection: React.FC<MarketsSectionProps> = ({
   currentAddress,
   currentView = "cards"
 }) => {
-  const [activeDay, setActiveDay] = useState<string>("tuesday");
+  const [activeDay, setActiveDay] = useState<string>("all");
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>("all");
 
   const handleDayClick = (day: string) => {

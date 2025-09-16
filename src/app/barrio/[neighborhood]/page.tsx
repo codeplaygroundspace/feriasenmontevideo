@@ -98,7 +98,7 @@ export default async function NeighborhoodPage({ params }: NeighborhoodPageProps
           // Find which day this market belongs to
           const marketDay = Object.keys(markets).find(day => 
             markets[day as keyof typeof markets]?.some(m => m.id === market.id)
-          ) || 'tuesday';
+          ) || 'all';
           
           // Create market object with day property
           const marketWithDay = {
