@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Navigation, Instagram, ExternalLink, Map } from "lucide-react";
+import Breadcrumb from "./Breadcrumb";
 
 interface MarketPageProps {
   market: Market;
@@ -46,10 +47,21 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
     window.open(mapsUrl, '_blank');
   };
 
+  const breadcrumbItems = [
+    { label: "Feria", href: "/" },
+    { 
+      label: market.neighborhood.replace(/-/g, " "), 
+      href: `/barrio/${market.neighborhood}` 
+    },
+    { label: market.name }
+  ];
+
   return (
-    <>
-          {/* Main Market Information */}
-          <Card className="mb-8">
+    <div className="container mx-auto px-4 py-8">
+      <Breadcrumb items={breadcrumbItems} />
+      
+      {/* Main Market Information */}
+      <Card className="mb-8">
             <CardHeader className="pb-6">
               {/* Market Title and Day - Desktop Layout */}
               <div className="hidden md:flex md:items-start md:justify-between md:gap-4 mb-4">
@@ -108,8 +120,10 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
                 <div className="w-full">
                   <img
                     src={market.imageUrl}
-                    alt={`Imagen de ${market.name}`}
+                    alt={`Imagen de ${market.name} - Mercado callejero en ${market.location}, barrio ${market.neighborhood.replace(/-/g, " ")}, Montevideo`}
                     className="w-full h-72 object-cover rounded-xl shadow-sm"
+                    loading="lazy"
+                    decoding="async"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
@@ -201,8 +215,22 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
                 <div>
                   <h3 className="font-semibold text-foreground mb-3 text-lg">Sobre este mercado</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Este es un mercado callejero tradicional de Montevideo. 
-                    Los horarios pueden variar según las condiciones climáticas y eventos especiales.
+                    Este es un mercado callejero tradicional de Montevideo ubicado en el barrio{" "}
+                    <Link 
+                      href={`/barrio/${market.neighborhood}`}
+                      className="text-primary hover:underline"
+                    >
+                      {market.neighborhood.replace(/-/g, " ")}
+                    </Link>
+                    . Los horarios pueden variar según las condiciones climáticas y eventos especiales.
+                    {" "}Descubre más{" "}
+                    <Link 
+                      href={`/dia/${day}`}
+                      className="text-primary hover:underline"
+                    >
+                      ferias los {getDayName(day)}
+                    </Link>
+                    {" "}en Montevideo.
                   </p>
                 </div>
                 
@@ -256,7 +284,7 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
                 {relatedMarkets.map((relatedMarket) => (
                   <Link
                     key={relatedMarket.id}
-                    href={`/market/${relatedMarket.id}`}
+                      href={`/feria/${relatedMarket.id}`}
                     className="block"
                   >
                     <Card className="hover:shadow-md transition-shadow duration-200">
@@ -300,7 +328,7 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
               </div>
             </div>
           )}
-    </>
+    </div>
   );
 };
 

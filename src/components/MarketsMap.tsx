@@ -217,7 +217,7 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'tuesday', select
                     
                     {/* Link to market detail page */}
                     <Link 
-                      href={`/market/${marketWithId.id}`}
+                      href={`/feria/${marketWithId.id}`}
                       className="inline-block w-full text-center bg-stone-100 hover:bg-stone-200 text-white text-sm font-medium py-2 px-4 rounded-md transition-colors duration-200"
                     >
                       Ver detalles
