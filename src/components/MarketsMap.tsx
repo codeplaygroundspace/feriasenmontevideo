@@ -55,7 +55,7 @@ interface MarketsMapProps {
   userCoordinates?: Coordinates | null;
 }
 
-const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'tuesday', selectedNeighborhood = 'all', userCoordinates }) => {
+const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'all', selectedNeighborhood = 'all', userCoordinates }) => {
   
   // Helper function to get background color for map popup distance badges
   const getDistanceBackgroundColor = (distance: number): string => {
@@ -90,7 +90,7 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'tuesday', select
     return allMarketsWithDays
       .filter(({ market, days }) => {
         // Handle day filtering
-        const dayMatch = days.includes(selectedDay);
+        const dayMatch = selectedDay === 'all' || days.includes(selectedDay);
         
         // Handle neighborhood filtering
         const neighborhoodMatch = selectedNeighborhood === 'all' || market.neighborhood === selectedNeighborhood;
@@ -125,6 +125,10 @@ const MarketsMap: React.FC<MarketsMapProps> = ({ selectedDay = 'tuesday', select
 
   // Get the most common color for a market (if it appears on multiple days)
   const getMarketColor = (days: string[]) => {
+    if (selectedDay === 'all') {
+      // When showing all days, use a neutral color
+      return "bg-gray-500";
+    }
     if (days.length === 1) {
       return dayColors[days[0] as keyof typeof dayColors] || "bg-gray-400";
     }

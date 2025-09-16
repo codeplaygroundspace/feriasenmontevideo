@@ -19,11 +19,22 @@ const MarketsCardGrid: React.FC<MarketsCardGridProps> = ({
   const filteredMarkets = useMemo(() => {
     let allMarkets: (Market & { day: string })[] = [];
 
-    // Get markets for the selected day
-    allMarkets = (markets[selectedDay] || []).map(market => ({
-      ...market,
-      day: selectedDay // Assign day from selected day
-    }));
+    // Get markets for the selected day or all days
+    if (selectedDay === "all") {
+      // Get all markets from all days
+      allMarkets = Object.entries(markets).flatMap(([day, dayMarkets]) =>
+        dayMarkets.map(market => ({
+          ...market,
+          day: day
+        }))
+      );
+    } else {
+      // Get markets for the specific selected day
+      allMarkets = (markets[selectedDay] || []).map(market => ({
+        ...market,
+        day: selectedDay
+      }));
+    }
 
     // Filter by neighborhood if not "all"
     if (selectedNeighborhood !== "all") {

@@ -20,7 +20,14 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: DayPageProps): Promise<Metadata> {
   const { day } = await params;
   const dayName = dayNames[day as keyof typeof dayNames];
-  const dayMarkets = markets[day as keyof typeof markets] || [];
+  
+  let dayMarkets: any[] = [];
+  if (day === 'all') {
+    // Get all markets from all days
+    dayMarkets = Object.values(markets).flat();
+  } else {
+    dayMarkets = markets[day as keyof typeof markets] || [];
+  }
   
   if (!dayName || dayMarkets.length === 0) {
     return {
@@ -31,16 +38,25 @@ export async function generateMetadata({ params }: DayPageProps): Promise<Metada
   
   const neighborhoods = Array.from(new Set(dayMarkets.map(market => market.neighborhood)));
   
+  const isAllDays = day === 'all';
+  const titleText = isAllDays ? 'Todas las Ferias' : `Ferias los ${dayName}`;
+  const descriptionText = isAllDays 
+    ? `Descubre todas las ferias y mercados callejeros de Montevideo. ${dayMarkets.length} ferias en ${neighborhoods.length} barrios diferentes.`
+    : `Descubre todas las ferias y mercados callejeros que funcionan los ${dayName} en Montevideo. ${dayMarkets.length} ferias en ${neighborhoods.length} barrios diferentes.`;
+  const keywordsText = isAllDays 
+    ? 'ferias montevideo, mercados montevideo, ferias todos los dias, productos locales'
+    : `ferias ${dayName}, mercados ${dayName}, ferias montevideo ${dayName}, productos locales ${dayName}`;
+
   return {
-    title: `Ferias los ${dayName} - Montevideo | Ferias de Montevideo`,
-    description: `Descubre todas las ferias y mercados callejeros que funcionan los ${dayName} en Montevideo. ${dayMarkets.length} ferias en ${neighborhoods.length} barrios diferentes.`,
-    keywords: `ferias ${dayName}, mercados ${dayName}, ferias montevideo ${dayName}, productos locales ${dayName}`,
+    title: `${titleText} - Montevideo | Ferias de Montevideo`,
+    description: descriptionText,
+    keywords: keywordsText,
     alternates: {
       canonical: `/dia/${day}`,
     },
     openGraph: {
-      title: `Ferias los ${dayName} - Montevideo`,
-      description: `${dayMarkets.length} ferias y mercados callejeros los ${dayName} en Montevideo.`,
+      title: `${titleText} - Montevideo`,
+      description: `${dayMarkets.length} ferias y mercados callejeros ${isAllDays ? 'en Montevideo' : `los ${dayName} en Montevideo`}.`,
       type: "website",
       url: `https://feriasdemontevideo.com/dia/${day}`,
       siteName: "Ferias de Montevideo",
@@ -52,7 +68,14 @@ export async function generateMetadata({ params }: DayPageProps): Promise<Metada
 export default async function DayPage({ params }: DayPageProps) {
   const { day } = await params;
   const dayName = dayNames[day as keyof typeof dayNames];
-  const dayMarkets = markets[day as keyof typeof markets] || [];
+  
+  let dayMarkets: any[] = [];
+  if (day === 'all') {
+    // Get all markets from all days
+    dayMarkets = Object.values(markets).flat();
+  } else {
+    dayMarkets = markets[day as keyof typeof markets] || [];
+  }
   
   if (!dayName || dayMarkets.length === 0) {
     notFound();
@@ -71,10 +94,10 @@ export default async function DayPage({ params }: DayPageProps) {
       
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-4">
-          Ferias los {dayName}
+          {day === 'all' ? 'Todas las Ferias' : `Ferias los ${dayName}`}
         </h1>
         <p className="text-muted-foreground text-lg">
-          {dayMarkets.length} ferias y mercados callejeros los {dayName} en Montevideo.
+          {dayMarkets.length} ferias y mercados callejeros {day === 'all' ? 'en Montevideo' : `los ${dayName} en Montevideo`}.
         </p>
         <p className="text-muted-foreground">
           Ferias en {neighborhoods.length} barrios: {neighborhoods.map(neighborhood => neighborhood.replace(/-/g, " ")).join(", ")}
