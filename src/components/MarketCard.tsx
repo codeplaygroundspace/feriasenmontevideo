@@ -86,9 +86,9 @@ const MarketCard: React.FC<MarketCardProps> = ({ market, day }) => {
           </div>
         </CardHeader>
         
-        <CardContent className="space-y-3">
+        <CardContent className="space-y-2">
         {/* Location */}
-        <div className="flex items-start gap-2">
+        <div className="flex items-start gap-1">
           <svg 
             className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" 
             fill="none" 
@@ -109,13 +109,12 @@ const MarketCard: React.FC<MarketCardProps> = ({ market, day }) => {
             />
           </svg>
           <div>
-            <p className="text-sm text-gray-600 font-medium">Ubicación</p>
             <p className="text-sm text-gray-800">{market.location}</p>
           </div>
         </div>
 
         {/* Neighborhood */}
-        <div className="flex items-start gap-2">
+        <div className="flex items-start gap-1">
           <svg 
             className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" 
             fill="none" 
@@ -130,7 +129,6 @@ const MarketCard: React.FC<MarketCardProps> = ({ market, day }) => {
             />
           </svg>
           <div>
-            <p className="text-sm text-gray-600 font-medium">Barrio</p>
             <p className="text-sm text-gray-800 capitalize">
               {market.neighborhood.replace(/-/g, " ")}
             </p>
@@ -138,7 +136,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ market, day }) => {
         </div>
 
         {/* Market Hours */}
-        <div className="flex items-start gap-2">
+        <div className="flex items-start gap-1">
           <svg 
             className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" 
             fill="none" 
@@ -153,7 +151,6 @@ const MarketCard: React.FC<MarketCardProps> = ({ market, day }) => {
             />
           </svg>
           <div>
-            <p className="text-sm text-gray-600 font-medium">Horario</p>
             <p className="text-sm text-gray-800">
               {market.beginningTime} - {market.endTime}
             </p>
@@ -162,7 +159,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ market, day }) => {
 
         {/* Distance (if available) */}
         {market.distance && (
-          <div className="flex items-start gap-2">
+          <div className="flex items-start gap-1">
             <svg 
               className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" 
               fill="none" 
