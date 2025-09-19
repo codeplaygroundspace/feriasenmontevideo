@@ -3,18 +3,18 @@ import { Info, MapPin, Calendar, Search, Heart, MessageSquare } from "lucide-rea
 import FeedbackButton from "./FeedbackButton";
 
 export const metadata: Metadata = {
-  title: "Acerca de - Ferias de Montevideo | Plataforma de Mercados Callejeros",
-  description: "Descubre la historia y propósito de Ferias de Montevideo. Una plataforma digital que conecta a los montevideanos con los productores locales y facilita el acceso a productos frescos y artesanales.",
+  title: "Acerca de - Ferias en Montevideo | Plataforma de Mercados Callejeros",
+  description: "Descubre la historia y propósito de Ferias en Montevideo. Una plataforma digital que conecta a los montevideanos con los productores locales y facilita el acceso a productos frescos y artesanales.",
   keywords: "acerca de, ferias montevideo, mercados callejeros, productores locales, cultura montevideana, plataforma digital",
   alternates: {
     canonical: "/acerca-de",
   },
   openGraph: {
-    title: "Acerca de Ferias de Montevideo",
+    title: "Acerca de Ferias en Montevideo",
     description: "Descubre la historia y propósito de esta plataforma que conecta a los montevideanos con los productores locales.",
     type: "website",
     url: "https://feriasdemontevideo.com/acerca-de",
-    siteName: "Ferias de Montevideo",
+    siteName: "Ferias en Montevideo",
     locale: "es_UY",
   },
 };
@@ -26,14 +26,14 @@ export default function AboutPage() {
       <div className="text-center space-y-6">
         <div className="flex items-center justify-center gap-3">
           <h1 className="text-2xl sm:text-3xl font-bold leading-tight">
-          ¿Qué es Ferias de Montevideo?
+          ¿Qué es Ferias en Montevideo?
           </h1>
         </div>          
           
           {/* Main Description */}
           <div className="text-center space-y-4">
             <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Ferias de Montevideo es una plataforma digital que te ayuda a descubrir y explorar 
+              Ferias en Montevideo es una plataforma digital que te ayuda a descubrir y explorar 
               todas las ferias y mercados callejeros de la ciudad. Nuestro objetivo es conectar 
               a los montevideanos con los productores locales y facilitar el acceso a productos 
               frescos y artesanales.

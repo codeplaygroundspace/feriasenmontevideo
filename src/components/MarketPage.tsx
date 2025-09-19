@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Navigation, Instagram, ExternalLink, Map } from "lucide-react";
 import Breadcrumb from "./Breadcrumb";
+import MarketCard from "./MarketCard";
 
 interface MarketPageProps {
   market: Market;
@@ -282,48 +283,11 @@ const MarketPage: React.FC<MarketPageProps> = ({ market, day, relatedMarkets }) 
               <h2 className="text-xl font-semibold mb-4">Otras ferias</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {relatedMarkets.map((relatedMarket) => (
-                  <Link
+                  <MarketCard
                     key={relatedMarket.id}
-                      href={`/feria/${relatedMarket.id}`}
-                    className="block"
-                  >
-                    <Card className="hover:shadow-md transition-shadow duration-200">
-                      <CardHeader className="pb-3">
-                        <CardTitle className="text-base leading-tight">
-                          {relatedMarket.name}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="space-y-2">
-                        <div className="flex items-start gap-2">
-                          <MapPin className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                          <p className="text-sm text-muted-foreground">
-                            {relatedMarket.location}
-                          </p>
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <svg 
-                            className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" 
-                            fill="none" 
-                            stroke="currentColor" 
-                            viewBox="0 0 24 24"
-                          >
-                            <path 
-                              strokeLinecap="round" 
-                              strokeLinejoin="round" 
-                              strokeWidth={2} 
-                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" 
-                            />
-                          </svg>
-                          <p className="text-sm text-muted-foreground">
-                            {relatedMarket.beginningTime} - {relatedMarket.endTime}
-                          </p>
-                        </div>
-                        <p className="text-xs text-muted-foreground capitalize">
-                          {relatedMarket.neighborhood.replace(/-/g, " ")}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </Link>
+                    market={relatedMarket}
+                    day={day}
+                  />
                 ))}
               </div>
             </div>

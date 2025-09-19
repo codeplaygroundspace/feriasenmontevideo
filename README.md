@@ -1,4 +1,4 @@
-# Ferias de Montevideo 🏪
+# Ferias en Montevideo 🏪
 
 A modern, interactive web application showcasing the vibrant markets and fairs of Montevideo, Uruguay. Built with Next.js 15, TypeScript, and Tailwind CSS.
 

@@ -64,12 +64,12 @@ export const getMarketWithDay = (slug: string): (Market & { id: string; day: str
 /**
  * Get related markets (same neighborhood or same day)
  */
-export const getRelatedMarkets = (currentMarket: Market & { id: string }, currentDay: string): (Market & { id: string })[] => {
+export const getRelatedMarkets = (currentMarket: Market & { id: string }, currentDay: string): (Market & { id: string; day: string })[] => {
   if (!currentMarket) {
     return [];
   }
   
-  const relatedMarkets: (Market & { id: string })[] = [];
+  const relatedMarkets: (Market & { id: string; day: string })[] = [];
   
   for (const [day, dayMarkets] of Object.entries(markets)) {
     for (const market of dayMarkets) {
@@ -82,7 +82,7 @@ export const getRelatedMarkets = (currentMarket: Market & { id: string }, curren
       
       // Check if it's related (same neighborhood or same day)
       if (marketWithId.neighborhood === currentMarket.neighborhood || day === currentDay) {
-        relatedMarkets.push(marketWithId);
+        relatedMarkets.push({ ...marketWithId, day });
       }
     }
   }

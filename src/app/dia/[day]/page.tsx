@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: DayPageProps): Promise<Metada
   
   if (!dayName || dayMarkets.length === 0) {
     return {
-      title: "Día no encontrado - Ferias de Montevideo",
+      title: "Día no encontrado - Ferias en Montevideo",
       description: "No hay ferias disponibles para este día.",
     };
   }
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: DayPageProps): Promise<Metada
     : `ferias ${dayName}, mercados ${dayName}, ferias montevideo ${dayName}, productos locales ${dayName}`;
 
   return {
-    title: `${titleText} - Montevideo | Ferias de Montevideo`,
+    title: `${titleText} - Montevideo | Ferias en Montevideo`,
     description: descriptionText,
     keywords: keywordsText,
     alternates: {
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: DayPageProps): Promise<Metada
       description: `${dayMarkets.length} ferias y mercados callejeros ${isAllDays ? 'en Montevideo' : `los ${dayName} en Montevideo`}.`,
       type: "website",
       url: `https://feriasdemontevideo.com/dia/${day}`,
-      siteName: "Ferias de Montevideo",
+      siteName: "Ferias en Montevideo",
       locale: "es_UY",
     },
   };

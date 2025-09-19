@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: MarketPageProps) {
   
   if (!marketWithDay) {
     return {
-      title: "Mercado no encontrado - Ferias de Montevideo",
+      title: "Mercado no encontrado - Ferias en Montevideo",
       description: "El mercado que buscas no existe.",
     };
   }
@@ -33,18 +33,18 @@ export async function generateMetadata({ params }: MarketPageProps) {
   const dayName = marketWithDay.day ? marketWithDay.day.charAt(0).toUpperCase() + marketWithDay.day.slice(1) : "";
   
   return {
-    title: `${marketWithDay.name} - ${neighborhoodName} | Ferias de Montevideo`,
+    title: `${marketWithDay.name} - ${neighborhoodName} | Ferias en Montevideo`,
     description: `Información completa sobre ${marketWithDay.name} en ${marketWithDay.location}, barrio ${neighborhoodName}, Montevideo. Horario: ${marketWithDay.beginningTime} - ${marketWithDay.endTime}. Mercado callejero tradicional.`,
     keywords: `${marketWithDay.name}, feria ${neighborhoodName}, mercado ${neighborhoodName}, ferias montevideo, ${dayName} montevideo, productos locales`,
     alternates: {
       canonical: `/feria/${slug}`,
     },
     openGraph: {
-      title: `${marketWithDay.name} - ${neighborhoodName} | Ferias de Montevideo`,
+      title: `${marketWithDay.name} - ${neighborhoodName} | Ferias en Montevideo`,
       description: `Ubicado en ${marketWithDay.location}, barrio ${neighborhoodName}. Horario: ${marketWithDay.beginningTime} - ${marketWithDay.endTime}`,
       type: "website",
       url: `https://feriasdemontevideo.com/feria/${slug}`,
-      siteName: "Ferias de Montevideo",
+      siteName: "Ferias en Montevideo",
       locale: "es_UY",
       images: marketWithDay.imageUrl ? [
         {
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: MarketPageProps) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${marketWithDay.name} - ${neighborhoodName} | Ferias de Montevideo`,
+      title: `${marketWithDay.name} - ${neighborhoodName} | Ferias en Montevideo`,
       description: `Ubicado en ${marketWithDay.location}, barrio ${neighborhoodName}. Horario: ${marketWithDay.beginningTime} - ${marketWithDay.endTime}`,
       images: marketWithDay.imageUrl ? [marketWithDay.imageUrl] : undefined,
     },
