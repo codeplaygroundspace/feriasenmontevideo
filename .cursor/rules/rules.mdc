@@ -5,3 +5,4 @@ alwaysApply: true
 ---
 
 Always use bun for this project instead of npm, pnpm or yarn.
+Always follow Nextjs best practise.

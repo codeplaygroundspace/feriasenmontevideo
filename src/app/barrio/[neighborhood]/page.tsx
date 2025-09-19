@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: NeighborhoodPageProps): Promi
   
   if (neighborhoodMarkets.length === 0) {
     return {
-      title: "Barrio no encontrado - Ferias de Montevideo",
+      title: "Barrio no encontrado - Ferias en Montevideo",
       description: "El barrio que buscas no tiene ferias registradas.",
     };
   }
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: NeighborhoodPageProps): Promi
   );
   
   return {
-    title: `Ferias en ${neighborhoodName} - Barrio de Montevideo | Ferias de Montevideo`,
+    title: `Ferias en ${neighborhoodName} - Barrio de Montevideo | Ferias en Montevideo`,
     description: `Descubre todas las ferias y mercados callejeros en el barrio ${neighborhoodName}, Montevideo. ${neighborhoodMarkets.length} ferias disponibles los ${daysWithMarkets.map(day => dayNames[day as keyof typeof dayNames]).join(", ")}.`,
     keywords: `ferias ${neighborhoodName}, mercados ${neighborhoodName}, barrio ${neighborhoodName}, ferias montevideo, productos locales ${neighborhoodName}`,
     alternates: {
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: NeighborhoodPageProps): Promi
       description: `${neighborhoodMarkets.length} ferias y mercados callejeros en ${neighborhoodName}, Montevideo.`,
       type: "website",
       url: `https://feriasdemontevideo.com/barrio/${neighborhood}`,
-      siteName: "Ferias de Montevideo",
+      siteName: "Ferias en Montevideo",
       locale: "es_UY",
     },
   };

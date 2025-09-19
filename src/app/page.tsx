@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense } from "react";
 import Link from "next/link";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar";
 import {
   Sidebar,
@@ -18,74 +19,42 @@ import {
 } from "@/components/ui/sidebar";
 import ViewToggle from "@/components/ViewToggle";
 import DayFilters from "@/components/DayFilters";
-import { MapPin, MessageSquare, Info } from "lucide-react";
+import { MessageSquare, Info } from "lucide-react";
 import NeighborhoodDropdown from "@/components/NeighborhoodDropdown";
 import AddressInput from "@/components/AddressInput";
 import DynamicMarketsMap from "@/components/DynamicMarketsMap";
 import MarketsCardGrid from "@/components/MarketsCardGrid";
 import { markets } from "@/data";
 import { dayNames, type Market } from "@/data";
-import type { Coordinates } from "@/hooks/useAddressGeocoding";
 import { useMarkets } from "@/hooks/useMarkets";
+import { useFilters } from "@/hooks/useFilters";
 
-export default function Home() {
-  const [selectedDay, setSelectedDay] = useState<string>("all");
-  const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>("all");
-  const [userAddress, setUserAddress] = useState<string>("");
-  const [userCoordinates, setUserCoordinates] = useState<Coordinates | null>(null);
-  const [currentView, setCurrentView] = useState<"map" | "cards">("cards");
-
+function HomeContent() {
   // Use the markets hook
   const { hasMarketsForDay, hasMarketsForDayInNeighborhood } = useMarkets();
-
-  const handleDayChange = (day: string) => {
-    setSelectedDay(day);
-    console.log(`Selected day: ${day}`);
-  };
-
-  const handleNeighborhoodChange = (neighborhood: string) => {
-    setSelectedNeighborhood(neighborhood);
-    
-    // If the current selected day doesn't have markets in the new neighborhood,
-    // automatically select the first available day
-    if (!hasMarketsForDayInNeighborhood(selectedDay, neighborhood)) {
-      const availableDays = Object.keys(dayNames).filter(day => 
-        hasMarketsForDayInNeighborhood(day, neighborhood)
-      );
-      if (availableDays.length > 0) {
-        setSelectedDay(availableDays[0]);
-      }
-    }
-    
-    console.log(`Selected neighborhood: ${neighborhood}`);
-  };
-
-  const handleAddressChange = (address: string, coordinates: Coordinates) => {
-    setUserAddress(address);
-    setUserCoordinates(coordinates);
-    console.log(`User address: ${address}`, coordinates);
-  };
-
-  const handleClearAddress = () => {
-    setUserAddress("");
-    setUserCoordinates(null);
-    console.log("Address cleared");
-  };
-
-  const handleViewChange = (view: "map" | "cards") => {
-    setCurrentView(view);
-    console.log(`View changed to: ${view}`);
-  };
+  
+  // Use the filters hook
+  const {
+    selectedDay,
+    selectedNeighborhood,
+    userAddress,
+    userCoordinates,
+    currentView,
+    handleDayChange,
+    handleNeighborhoodChange,
+    handleAddressChange,
+    handleClearAddress,
+    handleViewChange,
+  } = useFilters(hasMarketsForDayInNeighborhood);
 
   return (
     <SidebarProvider>
       {/* Main shadcn/ui Sidebar with all functionality */}
       <Sidebar>
-        <SidebarHeader>
+        {/* <SidebarHeader>
           <div className="flex items-center gap-2 px-2 py-2">
-            <MapPin className="h-6 w-6 text-primary" />
           </div>
-        </SidebarHeader>
+        </SidebarHeader> */}
 
         <SidebarContent>
           {/* View Toggle Section */}
@@ -155,9 +124,8 @@ export default function Home() {
 
           <SidebarSeparator />
 
-          {/* Feedback */}
+          {/* Feedback and About */}
           <SidebarGroup>
-            <SidebarGroupLabel>Feedback</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
                 <SidebarMenuItem>
@@ -169,17 +137,6 @@ export default function Home() {
                     <span>Feedback</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
-              </SidebarMenu>
-            </SidebarGroupContent>
-          </SidebarGroup>
-
-          <SidebarSeparator />
-
-          {/* About */}
-          <SidebarGroup>
-            <SidebarGroupLabel>Información</SidebarGroupLabel>
-            <SidebarGroupContent>
-              <SidebarMenu>
                 <SidebarMenuItem>
                   <SidebarMenuButton 
                     asChild
@@ -190,6 +147,11 @@ export default function Home() {
                       <span>Acerca de</span>
                     </Link>
                   </SidebarMenuButton>
+                </SidebarMenuItem>
+                <SidebarMenuItem>
+                  <div className="px-2 py-1 text-xs text-muted-foreground">
+                    Última actualización: 19/10/2025
+                  </div>
                 </SidebarMenuItem>
               </SidebarMenu>
             </SidebarGroupContent>
@@ -203,7 +165,7 @@ export default function Home() {
         <header className="sticky top-0 z-50 flex h-16 shrink-0 items-center gap-2 border-b bg-background px-4 backdrop-blur supports-[backdrop-filter]:bg-background/95">
           <SidebarTrigger className="-ml-1" />
           <div className="h-4 w-px bg-sidebar-border" />
-          <h1 className="text-lg font-semibold">Ferias de Montevideo</h1>
+          <h1 className="text-lg font-semibold">Ferias en Montevideo</h1>
         </header>
 
         {/* Main Content with Rounded Borders */}
@@ -230,5 +192,22 @@ export default function Home() {
         </div>
       </SidebarInset>
     </SidebarProvider>
+  );
+}
+
+export default function Home() {
+  return (
+    <ErrorBoundary>
+      <Suspense fallback={
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Cargando ferias...</p>
+          </div>
+        </div>
+      }>
+        <HomeContent />
+      </Suspense>
+    </ErrorBoundary>
   );
 }

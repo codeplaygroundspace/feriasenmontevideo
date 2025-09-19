@@ -20,12 +20,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Ferias de Montevideo - Mercados Callejeros y Ferias de Uruguay",
+  title: "Ferias en Montevideo - Mercados Callejeros y Ferias de Uruguay",
   description: "Descubre los mercados callejeros y ferias de Montevideo, Uruguay. Información completa sobre ubicaciones, horarios y productos locales. Encuentra las mejores ferias por barrio y día de la semana.",
   keywords: "ferias montevideo, mercados callejeros uruguay, ferias barrio, mercados montevideo, productos locales, ferias por día",
-  authors: [{ name: "Ferias de Montevideo" }],
-  creator: "Ferias de Montevideo",
-  publisher: "Ferias de Montevideo",
+  authors: [{ name: "Ferias en Montevideo" }],
+  creator: "Ferias en Montevideo",
+  publisher: "Ferias en Montevideo",
   formatDetection: {
     email: false,
     address: false,
@@ -36,10 +36,10 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Ferias de Montevideo - Mercados Callejeros y Ferias de Uruguay",
+    title: "Ferias en Montevideo - Mercados Callejeros y Ferias de Uruguay",
     description: "Descubre los mercados callejeros y ferias de Montevideo, Uruguay. Información completa sobre ubicaciones, horarios y productos locales.",
     url: 'https://feriasdemontevideo.com',
-    siteName: 'Ferias de Montevideo',
+    siteName: 'Ferias en Montevideo',
     locale: 'es_UY',
     type: 'website',
     images: [
@@ -47,13 +47,13 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ferias de Montevideo - Mercados Callejeros',
+        alt: 'Ferias en Montevideo - Mercados Callejeros',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Ferias de Montevideo - Mercados Callejeros y Ferias de Uruguay",
+    title: "Ferias en Montevideo - Mercados Callejeros y Ferias de Uruguay",
     description: "Descubre los mercados callejeros y ferias de Montevideo, Uruguay. Información completa sobre ubicaciones, horarios y productos locales.",
     images: ['/og-image.jpg'],
   },
@@ -85,7 +85,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Ferias de Montevideo" />
+        <meta name="apple-mobile-web-app-title" content="Ferias en Montevideo" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased`}
