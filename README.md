@@ -64,6 +64,8 @@ Navigate to [http://localhost:3000](http://localhost:3000) to see the applicatio
 - **Maps**: [Leaflet](https://leafletjs.com/) with React Leaflet
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Runtime**: [React 19](https://react.dev/)
+- **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
+- **Package Manager**: [Bun](https://bun.sh/)
 
 ## 📁 Project Structure
 
@@ -117,6 +119,12 @@ The application features an intelligent filtering system that adapts based on yo
 - **Google Maps Integration**: One-click directions
 - **Full-width Layout**: Optimized for detailed information display
 
+### Analytics & Performance
+- **Vercel Analytics**: Automatic page view tracking and performance monitoring
+- **Real-time Insights**: User behavior and site performance metrics
+- **Privacy-First**: GDPR compliant analytics with no cookies required
+- **Performance Monitoring**: Core Web Vitals and loading time tracking
+
 ## 🎨 Development
 
 ### Available Scripts
@@ -141,6 +149,7 @@ The application features an intelligent filtering system that adapts based on yo
 - ✅ **Market Detail Pages**: Comprehensive individual market information
 - ✅ **Responsive Design**: Mobile-optimized interface
 - ✅ **Distance Calculations**: Real-time distance from user location
+- ✅ **Vercel Analytics**: Integrated analytics for performance monitoring and user insights
 
 ## 🤝 Contributing
 
