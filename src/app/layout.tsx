@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 import "./globals.css";
 import "leaflet/dist/leaflet.css";
 
@@ -91,6 +92,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
