@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { markets } from "@/data";
 import { dayNames } from "@/data/days";
 import Breadcrumb from "@/components/Breadcrumb";
+import BreadcrumbStructuredData from "@/components/BreadcrumbStructuredData";
+import ItemListStructuredData from "@/components/ItemListStructuredData";
 import MarketCard from "@/components/MarketCard";
 import { Metadata } from "next";
 
@@ -88,9 +90,25 @@ export default async function DayPage({ params }: DayPageProps) {
     { label: dayName }
   ];
 
+  const breadcrumbStructuredItems = [
+    { name: "Inicio", url: "https://feriasdemontevideo.com" },
+    { name: dayName, url: `https://feriasdemontevideo.com/dia/${day}` }
+  ];
+
+  const isAllDays = day === 'all';
+  const pageTitle = isAllDays ? 'Todas las Ferias' : `Ferias los ${dayName}`;
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Breadcrumb items={breadcrumbItems} />
+    <>
+      <BreadcrumbStructuredData items={breadcrumbStructuredItems} />
+      <ItemListStructuredData 
+        markets={dayMarkets}
+        title={pageTitle}
+        description={`${dayMarkets.length} ferias y mercados callejeros ${isAllDays ? 'en Montevideo' : `los ${dayName} en Montevideo`}.`}
+        url={`https://feriasdemontevideo.com/dia/${day}`}
+      />
+      <div className="container mx-auto px-4 py-8">
+        <Breadcrumb items={breadcrumbItems} />
       
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-4">
@@ -121,6 +139,7 @@ export default async function DayPage({ params }: DayPageProps) {
           );
         })}
       </div>
-    </div>
+      </div>
+    </>
   );
 }
