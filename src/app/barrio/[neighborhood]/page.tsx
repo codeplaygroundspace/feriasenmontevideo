@@ -3,6 +3,8 @@ import { markets } from "@/data";
 import { dayNames } from "@/data/days";
 import MarketCard from "@/components/MarketCard";
 import Breadcrumb from "@/components/Breadcrumb";
+import BreadcrumbStructuredData from "@/components/BreadcrumbStructuredData";
+import ItemListStructuredData from "@/components/ItemListStructuredData";
 import { Metadata } from "next";
 
 interface NeighborhoodPageProps {
@@ -77,9 +79,22 @@ export default async function NeighborhoodPage({ params }: NeighborhoodPageProps
     { label: neighborhoodName }
   ];
 
+  const breadcrumbStructuredItems = [
+    { name: "Inicio", url: "https://feriasdemontevideo.com" },
+    { name: neighborhoodName, url: `https://feriasdemontevideo.com/barrio/${neighborhood}` }
+  ];
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Breadcrumb items={breadcrumbItems} />
+    <>
+      <BreadcrumbStructuredData items={breadcrumbStructuredItems} />
+      <ItemListStructuredData 
+        markets={neighborhoodMarkets}
+        title={`Ferias en ${neighborhoodName}`}
+        description={`${neighborhoodMarkets.length} ferias y mercados callejeros en el barrio ${neighborhoodName}, Montevideo.`}
+        url={`https://feriasdemontevideo.com/barrio/${neighborhood}`}
+      />
+      <div className="container mx-auto px-4 py-8">
+        <Breadcrumb items={breadcrumbItems} />
       
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-4">
@@ -115,6 +130,7 @@ export default async function NeighborhoodPage({ params }: NeighborhoodPageProps
           );
         })}
       </div>
-    </div>
+      </div>
+    </>
   );
 }

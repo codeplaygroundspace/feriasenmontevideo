@@ -1,27 +1,102 @@
 import { Metadata } from "next";
 import { Info, MapPin, Calendar, Search, Heart, MessageSquare } from "lucide-react";
 import FeedbackButton from "./FeedbackButton";
+import BreadcrumbStructuredData from "@/components/BreadcrumbStructuredData";
 
 export const metadata: Metadata = {
-  title: "Acerca de - Ferias en Montevideo | Plataforma de Mercados Callejeros",
-  description: "Descubre la historia y propósito de Ferias en Montevideo. Una plataforma digital que conecta a los montevideanos con los productores locales y facilita el acceso a productos frescos y artesanales.",
-  keywords: "acerca de, ferias montevideo, mercados callejeros, productores locales, cultura montevideana, plataforma digital",
+  title: "Acerca de Ferias en Montevideo - Plataforma de Mercados Callejeros",
+  description: "Descubre la historia y propósito de Ferias en Montevideo. Una plataforma digital gratuita que conecta a los montevideanos con los productores locales y facilita el acceso a productos frescos y artesanales. Información actualizada sobre más de 100 ferias vecinales.",
+  keywords: [
+    "acerca de ferias montevideo",
+    "plataforma mercados callejeros",
+    "productores locales uruguay",
+    "cultura montevideana",
+    "ferias vecinales",
+    "mercados de barrio",
+    "productos frescos montevideo"
+  ],
   alternates: {
     canonical: "/acerca-de",
   },
   openGraph: {
-    title: "Acerca de Ferias en Montevideo",
-    description: "Descubre la historia y propósito de esta plataforma que conecta a los montevideanos con los productores locales.",
+    title: "Acerca de Ferias en Montevideo - Conectando con Productores Locales",
+    description: "Plataforma digital gratuita con información actualizada sobre más de 100 ferias y mercados callejeros en Montevideo. Encuentra productos frescos y artesanales en tu barrio.",
     type: "website",
     url: "https://feriasdemontevideo.com/acerca-de",
     siteName: "Ferias en Montevideo",
     locale: "es_UY",
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Acerca de Ferias en Montevideo',
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Acerca de Ferias en Montevideo",
+    description: "Plataforma digital gratuita con información actualizada sobre ferias y mercados callejeros en Montevideo.",
+    images: ['/og-image.jpg'],
   },
 };
 
 export default function AboutPage() {
+  const breadcrumbItems = [
+    { name: "Inicio", url: "https://feriasdemontevideo.com" },
+    { name: "Acerca de", url: "https://feriasdemontevideo.com/acerca-de" }
+  ];
+
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué es Ferias en Montevideo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ferias en Montevideo es una plataforma digital que te ayuda a descubrir y explorar todas las ferias y mercados callejeros de la ciudad. Nuestro objetivo es conectar a los montevideanos con los productores locales y facilitar el acceso a productos frescos y artesanales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo funciona la plataforma?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Utilizamos datos oficiales y actualizados de las ferias de Montevideo para brindarte información precisa sobre ubicaciones, horarios y días de funcionamiento. Puedes filtrar por día para planificar tus visitas o explorar por barrio para encontrar ferias cerca de ti."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Por qué crearon esta plataforma?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Creemos que las ferias son una parte fundamental de la cultura montevideana y una excelente manera de apoyar a los productores locales. Queremos hacer que sea más fácil para todos descubrir y disfrutar de estos espacios únicos de la ciudad."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué puedo hacer en la plataforma?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Puedes explorar todas las ferias disponibles en Montevideo, filtrar por día de la semana y barrio, ver la ubicación exacta de cada feria en el mapa, encontrar ferias cerca de tu ubicación, conocer horarios y detalles de cada mercado, y obtener direcciones para llegar fácilmente."
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="space-y-8">
+    <>
+      <BreadcrumbStructuredData items={breadcrumbItems} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqStructuredData)
+        }}
+      />
+      <div className="space-y-8">
       {/* Main About Information */}
       <div className="text-center space-y-6">
         <div className="flex items-center justify-center gap-3">
@@ -148,6 +223,7 @@ export default function AboutPage() {
         </p>
         <FeedbackButton />
       </div>
-    </div>
+      </div>
+    </>
   );
 }
