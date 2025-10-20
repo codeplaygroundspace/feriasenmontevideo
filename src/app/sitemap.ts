@@ -4,7 +4,7 @@ import { markets } from '@/data'
 import { dayNames } from '@/data/days'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://feriasdemontevideo.com'
+  const baseUrl = 'https://feriasenmontevideo.vercel.app'
   
   // Get all market slugs
   const marketSlugs = getAllMarketSlugs()

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "feria del barrio",
     "mercado de productores"
   ],
-  authors: [{ name: "Ferias en Montevideo", url: "https://feriasdemontevideo.com" }],
+  authors: [{ name: "Ferias en Montevideo", url: "https://feriasenmontevideo.vercel.app" }],
   creator: "Ferias en Montevideo",
   publisher: "Ferias en Montevideo",
   formatDetection: {
@@ -47,14 +47,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://feriasdemontevideo.com'),
+  metadataBase: new URL('https://feriasenmontevideo.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Ferias en Montevideo - Mercados Callejeros y Ferias de Uruguay",
     description: "Descubre los mercados callejeros y ferias de Montevideo, Uruguay. Información completa sobre ubicaciones, horarios y productos locales.",
-    url: 'https://feriasdemontevideo.com',
+    url: 'https://feriasenmontevideo.vercel.app',
     siteName: 'Ferias en Montevideo',
     locale: 'es_UY',
     type: 'website',
